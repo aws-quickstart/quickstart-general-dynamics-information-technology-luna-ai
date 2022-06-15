@@ -5,11 +5,27 @@
 # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/format-version-structure.html
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
-  Mission Insights Enrichment Engine 
+  Mission Insights Enrichment Engine (qs-1t54183nf)
 
 # Transform section specifies one or more macros that AWS CloudFormation uses to process your template 
 # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-section-structure.html
 Transform: AWS::Serverless-2016-10-31
+
+Metadata:
+  cfn-lint:
+    config:
+      ignore_checks:
+        - W9001
+        - E9007
+#  AWS::CloudFormation::Interface:
+#    ParameterGroups:
+#    - Label:
+#        default: Application
+#      Parameters:
+#      - AppId
+#    ParameterLabels:
+#      AppId:
+#        default: Application ID
 
 # Shared configuration for all resources, more in 
 # https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
@@ -25,13 +41,15 @@ Globals:
         Team: "AI and Data Insights"
         Project: "mi-media engine"
 
-Parameters:
-  AppId:
-    Type: String
+#Parameters:
+#  AppId:
+#    Type: String
+#    Description: Application ID
 
 # Resources declares the AWS resources that you want to include in the stack
 # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resources-section-structure.html
 Resources:
+
   # Each Lambda function is defined by properties:
   # https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
 
@@ -1976,8 +1994,12 @@ Resources:
     Type: AWS::SQS::Queue
       
   ingestQueuePolicy:
-    DependsOn: ingestQueue
     Type: AWS::SQS::QueuePolicy
+    Metadata:
+      cfn-lint:
+        config:
+          ignore_checks:
+            - EPolicyWildcardPrincipal
     Properties:
         Queues: 
           - !Ref ingestQueue
@@ -1988,7 +2010,27 @@ Resources:
               - Sid: "ingestSID"
                 Effect: Allow
                 Principal: "*"
-                Action: "sqs:*"
+                Action:
+                  - "sqs:DeleteMessage"
+                  - "sqs:GetQueueUrl"
+                  - "sqs:DeleteMessageBatch"
+                  - "sqs:UntagQueue"
+                  - "sqs:CreateQueue"
+                  - "sqs:AddPermission"
+                  - "sqs:ChangeMessageVisibility"
+                  - "sqs:SendMessage"
+                  - "sqs:ListQueueTags"
+                  - "sqs:ReceiveMessage"
+                  - "sqs:GetQueueAttributes"
+                  - "sqs:ChangeMessageVisibilityBatch"
+                  - "sqs:PurgeQueue"
+                  - "sqs:TagQueue"
+                  - "sqs:ListDeadLetterSourceQueues"
+                  - "sqs:ListQueues"
+                  - "sqs:SendMessageBatch"
+                  - "sqs:DeleteQueue"
+                  - "sqs:SetQueueAttributes"
+                  - "sqs:RemovePermission"
                 Resource: !GetAtt ingestQueue.Arn
                 
   S3ingest:
@@ -2018,8 +2060,12 @@ Resources:
        VisibilityTimeout: 120
       
   comprehendlangQueuePolicy:
-    DependsOn: comprehendlangQueue
     Type: AWS::SQS::QueuePolicy
+    Metadata:
+      cfn-lint:
+        config:
+          ignore_checks:
+            - EPolicyWildcardPrincipal
     Properties:
         Queues: 
           - !Ref comprehendlangQueue
@@ -2030,7 +2076,27 @@ Resources:
               - Sid: "LangSID"
                 Effect: Allow
                 Principal: "*"
-                Action: "sqs:*"
+                Action:
+                  - "sqs:DeleteMessage"
+                  - "sqs:GetQueueUrl"
+                  - "sqs:DeleteMessageBatch"
+                  - "sqs:UntagQueue"
+                  - "sqs:CreateQueue"
+                  - "sqs:AddPermission"
+                  - "sqs:ChangeMessageVisibility"
+                  - "sqs:SendMessage"
+                  - "sqs:ListQueueTags"
+                  - "sqs:ReceiveMessage"
+                  - "sqs:GetQueueAttributes"
+                  - "sqs:ChangeMessageVisibilityBatch"
+                  - "sqs:PurgeQueue"
+                  - "sqs:TagQueue"
+                  - "sqs:ListDeadLetterSourceQueues"
+                  - "sqs:ListQueues"
+                  - "sqs:SendMessageBatch"
+                  - "sqs:DeleteQueue"
+                  - "sqs:SetQueueAttributes"
+                  - "sqs:RemovePermission"
                 Resource: !GetAtt comprehendlangQueue.Arn
 
   S3NlpLang:
@@ -2065,8 +2131,12 @@ Resources:
        VisibilityTimeout: 900
     
   comprehendnlpQueuePolicy:
-    DependsOn: comprehendnlpQueue
     Type: AWS::SQS::QueuePolicy
+    Metadata:
+      cfn-lint:
+        config:
+          ignore_checks:
+            - EPolicyWildcardPrincipal
     Properties:
         Queues: 
           - !Ref comprehendnlpQueue
@@ -2077,7 +2147,27 @@ Resources:
               - Sid: "nlpSID"
                 Effect: Allow
                 Principal: "*"
-                Action: "sqs:*"
+                Action:
+                  - "sqs:DeleteMessage"
+                  - "sqs:GetQueueUrl"
+                  - "sqs:DeleteMessageBatch"
+                  - "sqs:UntagQueue"
+                  - "sqs:CreateQueue"
+                  - "sqs:AddPermission"
+                  - "sqs:ChangeMessageVisibility"
+                  - "sqs:SendMessage"
+                  - "sqs:ListQueueTags"
+                  - "sqs:ReceiveMessage"
+                  - "sqs:GetQueueAttributes"
+                  - "sqs:ChangeMessageVisibilityBatch"
+                  - "sqs:PurgeQueue"
+                  - "sqs:TagQueue"
+                  - "sqs:ListDeadLetterSourceQueues"
+                  - "sqs:ListQueues"
+                  - "sqs:SendMessageBatch"
+                  - "sqs:DeleteQueue"
+                  - "sqs:SetQueueAttributes"
+                  - "sqs:RemovePermission"
                 Resource: !GetAtt comprehendnlpQueue.Arn
 
   S3NlpNer:
@@ -2144,7 +2234,7 @@ Resources:
 #    AssumeRolePolicyDocument:
 #      - TextractPolicy 
 #    ManagedPolicyArns:
-#      - arn:aws:iam::aws:policy/service-role/AmazonTextractServiceRole
+#      - !Sub arn:${AWS::Partition}:iam::aws:policy/service-role/AmazonTextractServiceRole
 
   TextractSNSRl:
     Type: AWS::IAM::Role
@@ -2162,11 +2252,10 @@ Resources:
                         lambda.amazonaws.com
                         ]
                 Action: sts:AssumeRole
-        ManagedPolicyArns: [
-            arn:aws:iam::aws:policy/AmazonS3FullAccess,
-            arn:aws:iam::aws:policy/AmazonTextractFullAccess,
-            arn:aws:iam::aws:policy/AmazonSNSFullAccess
-            ]
+        ManagedPolicyArns:
+            - !Sub arn:${AWS::Partition}:iam::aws:policy/AmazonS3FullAccess
+            - !Sub arn:${AWS::Partition}:iam::aws:policy/AmazonTextractFullAccess
+            - !Sub arn:${AWS::Partition}:iam::aws:policy/AmazonSNSFullAccess
 
   ComprehendAccess:
     Type: AWS::IAM::Role
@@ -2183,10 +2272,9 @@ Resources:
                         lambda.amazonaws.com
                         ]
                 Action: sts:AssumeRole
-        ManagedPolicyArns: [
-            arn:aws:iam::aws:policy/AmazonS3FullAccess,
-            arn:aws:iam::aws:policy/ComprehendFullAccess
-            ]
+        ManagedPolicyArns:
+            - !Sub arn:${AWS::Partition}:iam::aws:policy/AmazonS3FullAccess
+            - !Sub arn:${AWS::Partition}:iam::aws:policy/ComprehendFullAccess
             
   RekognitionAccess:
     Type: AWS::IAM::Role
@@ -2204,11 +2292,10 @@ Resources:
                         sns.amazonaws.com
                         ]
                 Action: sts:AssumeRole
-        ManagedPolicyArns: [
-            arn:aws:iam::aws:policy/AmazonS3FullAccess,
-            arn:aws:iam::aws:policy/AmazonRekognitionFullAccess,
-            arn:aws:iam::aws:policy/AmazonSNSFullAccess
-            ]
+        ManagedPolicyArns:
+            - !Sub arn:${AWS::Partition}:iam::aws:policy/AmazonS3FullAccess
+            - !Sub arn:${AWS::Partition}:iam::aws:policy/AmazonRekognitionFullAccess
+            - !Sub arn:${AWS::Partition}:iam::aws:policy/AmazonSNSFullAccess
             
 #API Secrets
   meAzureCVKey1:
