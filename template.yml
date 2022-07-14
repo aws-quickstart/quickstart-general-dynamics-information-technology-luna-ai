@@ -177,7 +177,7 @@ Resources:
             TableName: !Ref ErrorTable
         - EventBridgePutEventsPolicy:
             EventBusName: !Ref meb
-        - TextractPolicy: {}
+        - TextractDetectAnalyzePolicy: {}
         - S3CrudPolicy:
             BucketName: !Ref S3txtractA
         - S3CrudPolicy:
