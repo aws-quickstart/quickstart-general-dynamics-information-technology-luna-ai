@@ -1344,83 +1344,6 @@ Resources:
 #                    detail:
 #                        AssetType:
 #                            - png
-
-  azureCVimgDescr:
-    Type: AWS::Serverless::Function
-    Properties:
-      CodeUri: ./
-      Handler: src/handlers/azureCVimgDescr.lambda_handler
-      Layers:
-        - !Ref azurelayer
-      Runtime: python3.8
-      MemorySize: 128
-      Timeout: 120
-      Description: Enrichment Engine-Calls Azure Describe Image
-      Environment: #More info about Env Vars: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object
-        Variables:
-            AssetTable: !Ref Assets
-            AssetProcessingTable: !Ref AssetProcessing
-            AssetAttributeTable: !Ref AssetAttributes
-            AssetHistoryTable: !Ref AssetHistory
-            AssetFormatsTable: !Ref AssetFormats
-            SearchTable: !Ref SearchTable
-            SearchAggregateTable: !Ref SearchAggregateTable
-            ErrorTable: !Ref ErrorTable
-            EventBus_Name: !Ref meb
-            S3Assets: !Ref S3Assets
-            S3AzureDescrImg: !Ref S3AzureDescrImg
-            AzureKeyArn: !Ref meAzureCVKey1
-            AzureEndpointArn: !Ref meAzureEndpoint
-      Policies:
-        # Give Lambda basic execution Permission to the function
-        - AWSLambdaBasicExecutionRole
-        - DynamoDBReadPolicy:
-            TableName: !Ref Assets
-        - DynamoDBWritePolicy:
-            TableName: !Ref AssetProcessing
-        - DynamoDBReadPolicy:
-            TableName: !Ref AssetFormats
-        - DynamoDBWritePolicy:
-            TableName: !Ref SearchTable
-        - DynamoDBWritePolicy:
-            TableName: !Ref SearchAggregateTable
-        - DynamoDBWritePolicy:
-            TableName: !Ref ErrorTable
-        - EventBridgePutEventsPolicy:
-            EventBusName: !Ref meb
-        - S3ReadPolicy:
-            BucketName: !Ref S3Assets
-        - S3CrudPolicy:
-            BucketName: !Ref S3AzureDescrImg
-        - AWSSecretsManagerGetSecretValuePolicy:
-            SecretArn: !Ref meAzureCVKey1
-        - AWSSecretsManagerGetSecretValuePolicy:
-            SecretArn: !Ref meAzureEndpoint
-      Events:
-        imgeventJpg:
-            Type: EventBridgeRule
-            Properties:
-                EventBusName: !Ref meb
-                Pattern:
-                    source: 
-                        - gdit.me
-                    detail-type:
-                        - ingestion
-                    detail:
-                        AssetType:
-                            - jpg
-        imgeventPng:
-            Type: EventBridgeRule
-            Properties:
-                EventBusName: !Ref meb
-                Pattern:
-                    source: 
-                        - gdit.me
-                    detail-type:
-                        - ingestion
-                    detail:
-                        AssetType:
-                            - png
                             
   dynamodbEnrichments:
     Type: AWS::Serverless::Function
@@ -1462,26 +1385,7 @@ Resources:
                     detail-type:
                         - enrichments
 
-#  pillowlayer:
-#    Type: AWS::Serverless::LayerVersion
-#    Properties:
-#      ContentUri: ./pillowlayer/
-#      CompatibleRuntimes:
-#        - python3.8
-#    Metadata:
-#      BuildMethod: python3.8
-
-  azurelayer:
-    Type: AWS::Serverless::LayerVersion
-    Properties:
-      ContentUri: ./azurelayer/
-      CompatibleRuntimes:
-        - python3.8
-    Metadata:
-      BuildMethod: python3.8
-
   # Services - S3 
-
         
   S3txtract:
     DeletionPolicy: Delete
@@ -2296,32 +2200,6 @@ Resources:
             - !Sub arn:${AWS::Partition}:iam::aws:policy/AmazonS3FullAccess
             - !Sub arn:${AWS::Partition}:iam::aws:policy/AmazonRekognitionFullAccess
             - !Sub arn:${AWS::Partition}:iam::aws:policy/AmazonSNSFullAccess
-            
-#API Secrets
-  meAzureCVKey1:
-    Type: AWS::SecretsManager::Secret
-    Properties:
-      Name: me-AzureCV
-      Description: Media Engine Computer Vision Azure
-      SecretString: e4963e64371142f585e24c5bd0c57727
-#      Tags:
-#        - Tag
-
-  meAzureCVKey2:
-    Type: AWS::SecretsManager::Secret
-    Properties:
-      Name: me-AzureCV2
-      Description: Media Engine Computer Vision Azure
-      SecretString: 06a628b14cee46519b36df897af0fb5f
-#      Tags:
-#        - Tag 
-
-  meAzureEndpoint:
-    Type: AWS::SecretsManager::Secret
-    Properties:
-      Name: me-AzureCV3
-      Description: Media Engine Computer Vision Azure
-      SecretString: https://cvtest1.cognitiveservices.azure.com/
   
 Outputs:
   eventbridgename:
