@@ -1,0 +1,14 @@
+
+project:
+  name: quickstart-general-dynamics-information-technology-mission-insights
+  owner: quickstart-eng@amazon.com
+  #marketplace-ami: true
+  s3_regional_buckets: true
+  regions:
+    - us-east-1
+  s3_bucket: ''
+  template: packaged.yaml
+tests:
+  gdit:
+    regions:
+      - us-east-1

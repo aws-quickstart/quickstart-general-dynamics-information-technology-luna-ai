@@ -1,0 +1,289 @@
+-----------------------------------------------------------------------------
+Region: us-east-1
+StackName: tCaT-quickstart-general-dynamics-information-technology-mission-insights-gdit-b9987123238d4cbf822602e9d05da747
+*****************************************************************************
+ResourceStatusReason:  
+The following resource(s) failed to create: [textractStart, rkImgModeration,
+translateComplete, loadElasticSearch, loadAnalyticsStream, rkImgDetectText,
+rkImgDetectFaces, ingestQueuePolicy, dynamodbEnrichments, elementalConvertComplete,
+textractComplete, rkImgDetectLabels, translateStart, elementalConvertStart,
+loadKendraMetadata, loadKendraIndex, rekognitionStart, rkVidDetectFaces,
+rkVidDetectFacesComplete, comprehendnlpQueuePolicy, comprehendlangQueuePolicy,
+rekognitionComplete, rkImgDetectCelebrity, transcribeComplete, transcribeStart].
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                   LogicalResourceId                                                                                               ResourceStatusReason
+--------------------------------  ------------------  -----------------------------  --------------------------------------------------------------------------------------------------------------  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2022-08-24 04:38:44.650000+00:00  CREATE_FAILED       AWS::CloudFormation::Stack     tCaT-quickstart-general-dynamics-information-technology-mission-insights-gdit-b9987123238d4cbf822602e9d05da747  The following resource(s) failed to create: [textractStart, rkImgModeration, translateComplete, loadElasticSearch, loadAnalyticsStream, rkImgDetectText, rkImgDetectFaces, ingestQueuePolicy, dynamodbEnrichments, elementalConvertComplete, textractComplete, rkImgDetectLabels, translateStart, elementalConvertStart, loadKendraMetadata, loadKendraIndex, rekognitionStart, rkVidDetectFaces, rkVidDetectFacesComplete, comprehendnlpQueuePolicy, comprehendlangQueuePolicy, rekognitionComplete, rkImgDetectCelebrity, transcribeComplete, transcribeStart].
+2022-08-24 04:38:27.823000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 ingestionRole
+2022-08-24 04:38:08.986000+00:00  CREATE_FAILED       AWS::SQS::QueuePolicy          ingestQueuePolicy                                                                                               20 actions were found in a statement from the submitted policy, max allowed is 7 (Service: AmazonSQS; Status Code: 403; Error Code: OverLimit; Request ID: 90919516-b72b-56d1-a6b0-ce691a5bbe89; Proxy: null)
+2022-08-24 04:38:08.764000+00:00  CREATE_FAILED       AWS::SQS::QueuePolicy          comprehendlangQueuePolicy                                                                                       20 actions were found in a statement from the submitted policy, max allowed is 7 (Service: AmazonSQS; Status Code: 403; Error Code: OverLimit; Request ID: c0bfa557-2d91-53b3-bcc0-fe2880e14b11; Proxy: null)
+2022-08-24 04:38:08.659000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 ingestionRole                                                                                                   Resource creation Initiated
+2022-08-24 04:38:08.252000+00:00  CREATE_IN_PROGRESS  AWS::SQS::QueuePolicy          ingestQueuePolicy
+2022-08-24 04:38:08.051000+00:00  CREATE_IN_PROGRESS  AWS::SQS::QueuePolicy          comprehendlangQueuePolicy
+2022-08-24 04:38:07.911000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 ingestionRole
+2022-08-24 04:38:07.839000+00:00  CREATE_FAILED       AWS::SQS::QueuePolicy          comprehendnlpQueuePolicy                                                                                        20 actions were found in a statement from the submitted policy, max allowed is 7 (Service: AmazonSQS; Status Code: 403; Error Code: OverLimit; Request ID: 77b441da-6270-54b7-9bd0-1aa5cf1f0093; Proxy: null)
+2022-08-24 04:38:07.161000+00:00  CREATE_IN_PROGRESS  AWS::SQS::QueuePolicy          comprehendnlpQueuePolicy
+2022-08-24 04:38:03.665000+00:00  CREATE_COMPLETE     AWS::SQS::Queue                comprehendlangQueue
+2022-08-24 04:38:03.340000+00:00  CREATE_COMPLETE     AWS::SQS::Queue                ingestQueue
+2022-08-24 04:38:02.967000+00:00  CREATE_COMPLETE     AWS::SQS::Queue                comprehendnlpQueue
+2022-08-24 04:37:48.299000+00:00  CREATE_FAILED       AWS::Lambda::Function          rkImgDetectLabels                                                                                               Resource handler returned message: "Your access has been denied by S3, please make sure your request credentials have permission to GetObject for aws-quickstart-sar/6d1ac94de700c52710eb3c04cc62cc52. S3 Error Code: AccessDenied. S3 Error Message: Access Denied (Service: Lambda, Status Code: 403, Request ID: eebca17a-ac4a-451b-834e-d9bcc6b328a1)" (RequestToken: 2344a4e6-3a11-576f-7185-91896fd20049, HandlerErrorCode: AccessDenied)
+2022-08-24 04:37:48.266000+00:00  CREATE_FAILED       AWS::Lambda::Function          rkImgDetectCelebrity                                                                                            Resource handler returned message: "Your access has been denied by S3, please make sure your request credentials have permission to GetObject for aws-quickstart-sar/67b623e45b8bd568ba5205c8bbc52517. S3 Error Code: AccessDenied. S3 Error Message: Access Denied (Service: Lambda, Status Code: 403, Request ID: 21c612ba-73cf-4620-9770-9eefdbcf2c42)" (RequestToken: 2e346780-67a3-1e7c-3f26-22b3af0c9778, HandlerErrorCode: AccessDenied)
+2022-08-24 04:37:48.088000+00:00  CREATE_FAILED       AWS::Lambda::Function          rkImgModeration                                                                                                 Resource handler returned message: "Your access has been denied by S3, please make sure your request credentials have permission to GetObject for aws-quickstart-sar/a12de34742d93c77a0d17c2a76513432. S3 Error Code: AccessDenied. S3 Error Message: Access Denied (Service: Lambda, Status Code: 403, Request ID: 399e958b-bfc6-46c9-aa07-89382a0c005b)" (RequestToken: 1cb7f689-e66e-50da-f8b8-f32c195a3e53, HandlerErrorCode: AccessDenied)
+2022-08-24 04:37:48.052000+00:00  CREATE_FAILED       AWS::Lambda::Function          textractComplete                                                                                                Resource handler returned message: "Your access has been denied by S3, please make sure your request credentials have permission to GetObject for aws-quickstart-sar/e443a1a47a5da56a44e55611e72371c8. S3 Error Code: AccessDenied. S3 Error Message: Access Denied (Service: Lambda, Status Code: 403, Request ID: 8add4b2a-7127-4665-ae73-191217c5097e)" (RequestToken: c0009f15-77d1-5f51-259b-be2b7b76b7b3, HandlerErrorCode: AccessDenied)
+2022-08-24 04:37:47.930000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkImgDetectLabels                                                                                               Resource creation Initiated
+2022-08-24 04:37:47.807000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkImgDetectCelebrity                                                                                            Resource creation Initiated
+2022-08-24 04:37:47.604000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkImgModeration                                                                                                 Resource creation Initiated
+2022-08-24 04:37:47.596000+00:00  CREATE_FAILED       AWS::Lambda::Function          rkImgDetectFaces                                                                                                Resource handler returned message: "Your access has been denied by S3, please make sure your request credentials have permission to GetObject for aws-quickstart-sar/ea82788ea61e0031b599f32624165881. S3 Error Code: AccessDenied. S3 Error Message: Access Denied (Service: Lambda, Status Code: 403, Request ID: 2c9a51bc-4806-4e17-b3f6-e61392e322f0)" (RequestToken: 9ad359d8-cbfd-f591-f52d-8d0bd6261883, HandlerErrorCode: AccessDenied)
+2022-08-24 04:37:47.575000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          textractComplete                                                                                                Resource creation Initiated
+2022-08-24 04:37:47.135000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkImgDetectFaces                                                                                                Resource creation Initiated
+2022-08-24 04:37:46.905000+00:00  CREATE_FAILED       AWS::Lambda::Function          rkImgDetectText                                                                                                 Resource handler returned message: "Your access has been denied by S3, please make sure your request credentials have permission to GetObject for aws-quickstart-sar/bc593037f57fc034f8de2a235912917e. S3 Error Code: AccessDenied. S3 Error Message: Access Denied (Service: Lambda, Status Code: 403, Request ID: 13260ff3-005b-4cab-8a90-b898dc9fe577)" (RequestToken: 3af9bb63-3f14-fad9-18e9-d1cb1a7b5578, HandlerErrorCode: AccessDenied)
+2022-08-24 04:37:46.497000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkImgDetectText                                                                                                 Resource creation Initiated
+2022-08-24 04:37:45.860000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkImgDetectCelebrity
+2022-08-24 04:37:45.810000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkImgDetectLabels
+2022-08-24 04:37:45.496000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkImgModeration
+2022-08-24 04:37:45.474000+00:00  CREATE_FAILED       AWS::Lambda::Function          textractStart                                                                                                   Resource handler returned message: "Your access has been denied by S3, please make sure your request credentials have permission to GetObject for aws-quickstart-sar/7252924ec9f06043ffba0b59dde79aac. S3 Error Code: AccessDenied. S3 Error Message: Access Denied (Service: Lambda, Status Code: 403, Request ID: e42f3fb4-b35d-4b3d-a787-a66e6e296c75)" (RequestToken: 2ae42bcb-9ea8-a92e-9884-697c4d2cdb7d, HandlerErrorCode: AccessDenied)
+2022-08-24 04:37:45.339000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          textractComplete
+2022-08-24 04:37:44.928000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          textractStart                                                                                                   Resource creation Initiated
+2022-08-24 04:37:44.754000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkImgDetectText
+2022-08-24 04:37:44.705000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkImgDetectFaces
+2022-08-24 04:37:44.275000+00:00  CREATE_FAILED       AWS::Lambda::Function          rkVidDetectFacesComplete                                                                                        Resource handler returned message: "Your access has been denied by S3, please make sure your request credentials have permission to GetObject for aws-quickstart-sar/608d18a4ea3ada949c14dfd8f5e05545. S3 Error Code: AccessDenied. S3 Error Message: Access Denied (Service: Lambda, Status Code: 403, Request ID: 86a9b313-5ce5-4de6-a702-4f6ce39a1e8e)" (RequestToken: 0666d717-6be9-7468-3eb3-4d5b55b74def, HandlerErrorCode: AccessDenied)
+2022-08-24 04:37:44.150000+00:00  CREATE_FAILED       AWS::Lambda::Function          dynamodbEnrichments                                                                                             Resource handler returned message: "Your access has been denied by S3, please make sure your request credentials have permission to GetObject for aws-quickstart-sar/b887305983bce952563a070785e2e679. S3 Error Code: AccessDenied. S3 Error Message: Access Denied (Service: Lambda, Status Code: 403, Request ID: e8255c22-da59-4715-95e8-09075890af0d)" (RequestToken: 4adc68ba-3c45-2a15-febf-f48ea14058fd, HandlerErrorCode: AccessDenied)
+2022-08-24 04:37:43.878000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkVidDetectFacesComplete                                                                                        Resource creation Initiated
+2022-08-24 04:37:43.648000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          dynamodbEnrichments                                                                                             Resource creation Initiated
+2022-08-24 04:37:42.936000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          textractStart
+2022-08-24 04:37:42.123000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 rkImgDetectCelebrityRole
+2022-08-24 04:37:42.094000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 rkImgDetectLabelsRole
+2022-08-24 04:37:41.898000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 rkImgModerationRole
+2022-08-24 04:37:41.814000+00:00  CREATE_FAILED       AWS::Lambda::Function          rkVidDetectFaces                                                                                                Resource handler returned message: "Your access has been denied by S3, please make sure your request credentials have permission to GetObject for aws-quickstart-sar/74f483757353a7fa39be777491dc0875. S3 Error Code: AccessDenied. S3 Error Message: Access Denied (Service: Lambda, Status Code: 403, Request ID: 10f5f4f4-599b-4862-a32d-ed716f54b458)" (RequestToken: 8b309061-4bd9-bc25-60a0-f42a553f950c, HandlerErrorCode: AccessDenied)
+2022-08-24 04:37:41.752000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          dynamodbEnrichments
+2022-08-24 04:37:41.635000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 rkImgDetectFacesRole
+2022-08-24 04:37:41.428000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 textractCompleteRole
+2022-08-24 04:37:41.387000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkVidDetectFacesComplete
+2022-08-24 04:37:41.371000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 rkImgDetectTextRole
+2022-08-24 04:37:41.359000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkVidDetectFaces                                                                                                Resource creation Initiated
+2022-08-24 04:37:39.053000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 textractStartRole
+2022-08-24 04:37:39.052000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkVidDetectFaces
+2022-08-24 04:37:38.830000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 dynamodbEnrichmentsRole
+2022-08-24 04:37:37.932000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 rkVidDetectFacesCompleteRole
+2022-08-24 04:37:35.782000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 rkVidDetectFacesRole
+2022-08-24 04:37:18.828000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 dynamodbEnrichmentsRole                                                                                         Resource creation Initiated
+2022-08-24 04:37:18.594000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkImgModerationRole                                                                                             Resource creation Initiated
+2022-08-24 04:37:18.593000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkImgDetectCelebrityRole                                                                                        Resource creation Initiated
+2022-08-24 04:37:18.554000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkImgDetectTextRole                                                                                             Resource creation Initiated
+2022-08-24 04:37:18.526000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkImgDetectLabelsRole                                                                                           Resource creation Initiated
+2022-08-24 04:37:18.365000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkImgDetectFacesRole                                                                                            Resource creation Initiated
+2022-08-24 04:37:18.156000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkImgDetectTextRole
+2022-08-24 04:37:18.149000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkImgModerationRole
+2022-08-24 04:37:18.094000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkImgDetectCelebrityRole
+2022-08-24 04:37:18.038000+00:00  CREATE_FAILED       AWS::Lambda::Function          loadKendraMetadata                                                                                              Resource handler returned message: "Your access has been denied by S3, please make sure your request credentials have permission to GetObject for aws-quickstart-sar/53d9e424fefc28fb62189a41c619e57b. S3 Error Code: AccessDenied. S3 Error Message: Access Denied (Service: Lambda, Status Code: 403, Request ID: 14e6ed44-a4d3-47b9-b8d6-44e6485e095c)" (RequestToken: 96f45c3f-6dad-6be3-9a31-557a7093131e, HandlerErrorCode: AccessDenied)
+2022-08-24 04:37:17.986000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 dynamodbEnrichmentsRole
+2022-08-24 04:37:17.881000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkImgDetectLabelsRole
+2022-08-24 04:37:17.853000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkImgDetectFacesRole
+2022-08-24 04:37:17.823000+00:00  CREATE_FAILED       AWS::Lambda::Function          loadKendraIndex                                                                                                 Resource handler returned message: "Your access has been denied by S3, please make sure your request credentials have permission to GetObject for aws-quickstart-sar/216e7f1c5d57d76392e9911371dfc640. S3 Error Code: AccessDenied. S3 Error Message: Access Denied (Service: Lambda, Status Code: 403, Request ID: 0994eb8d-8c9b-4354-a062-bee1aadce507)" (RequestToken: 51f28e36-37fc-b452-a4ad-efd04d3b5541, HandlerErrorCode: AccessDenied)
+2022-08-24 04:37:17.508000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          loadKendraMetadata                                                                                              Resource creation Initiated
+2022-08-24 04:37:17.170000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          loadKendraIndex                                                                                                 Resource creation Initiated
+2022-08-24 04:37:16.522000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 textractCompleteRole                                                                                            Resource creation Initiated
+2022-08-24 04:37:16.108000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 textractCompleteRole
+2022-08-24 04:37:15.573000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          loadKendraMetadata
+2022-08-24 04:37:15.570000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkVidDetectFacesCompleteRole                                                                                    Resource creation Initiated
+2022-08-24 04:37:15.414000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          loadKendraIndex
+2022-08-24 04:37:15.009000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkVidDetectFacesCompleteRole
+2022-08-24 04:37:15.001000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 textractStartRole                                                                                               Resource creation Initiated
+2022-08-24 04:37:14.951000+00:00  CREATE_COMPLETE     AWS::DynamoDB::Table           SearchTable
+2022-08-24 04:37:14.911000+00:00  CREATE_COMPLETE     AWS::DynamoDB::Table           SearchAggregateTable
+2022-08-24 04:37:14.521000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkVidDetectFacesRole                                                                                            Resource creation Initiated
+2022-08-24 04:37:14.443000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 textractStartRole
+2022-08-24 04:37:14.014000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkVidDetectFacesRole
+2022-08-24 04:37:12.701000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 loadKendraMetadataRole
+2022-08-24 04:37:12.463000+00:00  CREATE_FAILED       AWS::Lambda::Function          loadElasticSearch                                                                                               Resource handler returned message: "Your access has been denied by S3, please make sure your request credentials have permission to GetObject for aws-quickstart-sar/011dffdd8c26ef4aebecd9debb94b3b1. S3 Error Code: AccessDenied. S3 Error Message: Access Denied (Service: Lambda, Status Code: 403, Request ID: 323e79aa-1fae-49f2-91c6-324aa7b4e8e5)" (RequestToken: 96263f07-4002-956c-3a51-c4df3639ef11, HandlerErrorCode: AccessDenied)
+2022-08-24 04:37:12.283000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 loadKendraIndexRole
+2022-08-24 04:37:12.260000+00:00  CREATE_FAILED       AWS::Lambda::Function          loadAnalyticsStream                                                                                             Resource handler returned message: "Your access has been denied by S3, please make sure your request credentials have permission to GetObject for aws-quickstart-sar/5ba9f59c90edeec2bb8e76bbd3ed7c19. S3 Error Code: AccessDenied. S3 Error Message: Access Denied (Service: Lambda, Status Code: 403, Request ID: 180dcd37-0dc5-4106-8bc5-933eac73d4fd)" (RequestToken: 0c0cc644-5582-67d8-0b2a-76a13cc9acf1, HandlerErrorCode: AccessDenied)
+2022-08-24 04:37:12.234000+00:00  CREATE_FAILED       AWS::Lambda::Function          elementalConvertStart                                                                                           Resource handler returned message: "Your access has been denied by S3, please make sure your request credentials have permission to GetObject for aws-quickstart-sar/4e02a13dbc487bb7fc643a114e339ee0. S3 Error Code: AccessDenied. S3 Error Message: Access Denied (Service: Lambda, Status Code: 403, Request ID: c03ad4cf-b397-42aa-be15-e13149730def)" (RequestToken: 846391bb-0b45-ea04-203a-109f99559f55, HandlerErrorCode: AccessDenied)
+2022-08-24 04:37:12.124000+00:00  CREATE_FAILED       AWS::Lambda::Function          elementalConvertComplete                                                                                        Resource handler returned message: "Your access has been denied by S3, please make sure your request credentials have permission to GetObject for aws-quickstart-sar/2be0112f93bb17729673bf3f6e12e6c0. S3 Error Code: AccessDenied. S3 Error Message: Access Denied (Service: Lambda, Status Code: 403, Request ID: c0b0e6a2-85a3-4ba3-9b09-a1aadf31702c)" (RequestToken: f44a2799-8cfc-2a8c-5146-181a7b5ef25b, HandlerErrorCode: AccessDenied)
+2022-08-24 04:37:12.121000+00:00  CREATE_FAILED       AWS::Lambda::Function          translateComplete                                                                                               Resource handler returned message: "Your access has been denied by S3, please make sure your request credentials have permission to GetObject for aws-quickstart-sar/cb7da8612eb8df89e4698ba3f7f2d7d3. S3 Error Code: AccessDenied. S3 Error Message: Access Denied (Service: Lambda, Status Code: 403, Request ID: f67d90c6-557b-44ba-ac55-b26f74c16861)" (RequestToken: 2d762833-e453-5758-bc0b-2276ec3e2cbe, HandlerErrorCode: AccessDenied)
+2022-08-24 04:37:11.955000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          loadElasticSearch                                                                                               Resource creation Initiated
+2022-08-24 04:37:11.795000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          elementalConvertStart                                                                                           Resource creation Initiated
+2022-08-24 04:37:11.742000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          translateComplete                                                                                               Resource creation Initiated
+2022-08-24 04:37:11.649000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3RkCeleb
+2022-08-24 04:37:11.635000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          loadAnalyticsStream                                                                                             Resource creation Initiated
+2022-08-24 04:37:11.627000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3Kendra
+2022-08-24 04:37:11.596000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3NlpKp
+2022-08-24 04:37:11.589000+00:00  CREATE_FAILED       AWS::Lambda::Function          transcribeComplete                                                                                              Resource handler returned message: "Your access has been denied by S3, please make sure your request credentials have permission to GetObject for aws-quickstart-sar/6a3077e3d59f041ad761f5e4f24640d9. S3 Error Code: AccessDenied. S3 Error Message: Access Denied (Service: Lambda, Status Code: 403, Request ID: dfc70746-3cde-4d55-bc81-227deef2d261)" (RequestToken: 46ea0628-ff48-c7c3-ea13-f9c42093721c, HandlerErrorCode: AccessDenied)
+2022-08-24 04:37:11.576000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          elementalConvertComplete                                                                                        Resource creation Initiated
+2022-08-24 04:37:11.572000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3txtractA
+2022-08-24 04:37:11.490000+00:00  CREATE_FAILED       AWS::Lambda::Function          translateStart                                                                                                  Resource handler returned message: "Your access has been denied by S3, please make sure your request credentials have permission to GetObject for aws-quickstart-sar/d3b5c2153a7c918752d8128a41fdc2f2. S3 Error Code: AccessDenied. S3 Error Message: Access Denied (Service: Lambda, Status Code: 403, Request ID: ec12e262-3612-4f59-a33a-4560302d89ef)" (RequestToken: a4ebbc1c-825a-5322-bd16-a0b19710bd6e, HandlerErrorCode: AccessDenied)
+2022-08-24 04:37:11.304000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3RkSegDet
+2022-08-24 04:37:11.267000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3RkMod
+2022-08-24 04:37:11.240000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3NlpTop
+2022-08-24 04:37:11.235000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3Transcribe
+2022-08-24 04:37:11.208000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3RkFacSrch
+2022-08-24 04:37:11.146000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          transcribeComplete                                                                                              Resource creation Initiated
+2022-08-24 04:37:11.144000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3AzureDescrImg
+2022-08-24 04:37:11.140000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3RkPplTrc
+2022-08-24 04:37:11.121000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3Assets
+2022-08-24 04:37:11.027000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          translateStart                                                                                                  Resource creation Initiated
+2022-08-24 04:37:10.930000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3txtPlain
+2022-08-24 04:37:10.928000+00:00  CREATE_FAILED       AWS::Lambda::Function          rekognitionComplete                                                                                             Resource handler returned message: "Your access has been denied by S3, please make sure your request credentials have permission to GetObject for aws-quickstart-sar/4477ee0c41050f86d93afa0df9d985d0. S3 Error Code: AccessDenied. S3 Error Message: Access Denied (Service: Lambda, Status Code: 403, Request ID: e5f64405-4a4b-412e-8e8e-18309b949b83)" (RequestToken: 074c0598-5642-9ee2-611a-b88bedc68f25, HandlerErrorCode: AccessDenied)
+2022-08-24 04:37:10.924000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3txtract
+2022-08-24 04:37:10.914000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3RkFacDet
+2022-08-24 04:37:10.908000+00:00  CREATE_FAILED       AWS::Lambda::Function          transcribeStart                                                                                                 Resource handler returned message: "Your access has been denied by S3, please make sure your request credentials have permission to GetObject for aws-quickstart-sar/41f6883d55daf6055fba8fc851de6f8d. S3 Error Code: AccessDenied. S3 Error Message: Access Denied (Service: Lambda, Status Code: 403, Request ID: e35d7325-828d-4391-91e4-26a4e7c8457e)" (RequestToken: 639fe271-3ff6-52d3-2f31-791cf3276f44, HandlerErrorCode: AccessDenied)
+2022-08-24 04:37:10.887000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3RkLblDet
+2022-08-24 04:37:10.705000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3RkTxtDet
+2022-08-24 04:37:10.680000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3Translate
+2022-08-24 04:37:10.661000+00:00  CREATE_FAILED       AWS::Lambda::Function          rekognitionStart                                                                                                Resource handler returned message: "Your access has been denied by S3, please make sure your request credentials have permission to GetObject for aws-quickstart-sar/b6f5a745ebfbe1ad63e9a209fc070d19. S3 Error Code: AccessDenied. S3 Error Message: Access Denied (Service: Lambda, Status Code: 403, Request ID: e73fa33a-7a05-4c3e-b00c-82de872a50d7)" (RequestToken: b0b57702-3240-9f36-e6d0-2a83b8eb637e, HandlerErrorCode: AccessDenied)
+2022-08-24 04:37:10.577000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rekognitionComplete                                                                                             Resource creation Initiated
+2022-08-24 04:37:10.454000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          transcribeStart                                                                                                 Resource creation Initiated
+2022-08-24 04:37:10.120000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rekognitionStart                                                                                                Resource creation Initiated
+2022-08-24 04:37:10.093000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          elementalConvertStart
+2022-08-24 04:37:09.873000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          loadElasticSearch
+2022-08-24 04:37:09.713000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          translateComplete
+2022-08-24 04:37:09.355000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          loadAnalyticsStream
+2022-08-24 04:37:09.163000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          translateStart
+2022-08-24 04:37:09.130000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          elementalConvertComplete
+2022-08-24 04:37:08.882000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          transcribeStart
+2022-08-24 04:37:08.540000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rekognitionComplete
+2022-08-24 04:37:08.345000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          transcribeComplete
+2022-08-24 04:37:08.180000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rekognitionStart
+2022-08-24 04:37:06.721000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 elementalConvertStartRole
+2022-08-24 04:37:06.585000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 translateCompleteRole
+2022-08-24 04:37:06.458000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 loadElasticSearchRole
+2022-08-24 04:37:06.226000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 ComprehendAccess
+2022-08-24 04:37:06.180000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 loadAnalyticsStreamRole
+2022-08-24 04:37:05.965000+00:00  CREATE_COMPLETE     AWS::DynamoDB::Table           AssetHistory
+2022-08-24 04:37:05.933000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 elementalConvertCompleteRole
+2022-08-24 04:37:05.799000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 transcribeStartRole
+2022-08-24 04:37:05.749000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 RekognitionAccess
+2022-08-24 04:37:05.526000+00:00  CREATE_COMPLETE     AWS::Events::Archive           mebArchive
+2022-08-24 04:37:05.523000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 translateStartRole
+2022-08-24 04:37:05.408000+00:00  CREATE_COMPLETE     AWS::DynamoDB::Table           CollectionSubscribers
+2022-08-24 04:37:05.277000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 rekognitionCompleteRole
+2022-08-24 04:37:05.247000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 transcribeCompleteRole
+2022-08-24 04:37:05.209000+00:00  CREATE_COMPLETE     AWS::DynamoDB::Table           ErrorTable
+2022-08-24 04:37:05.149000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 TextractSNSRl
+2022-08-24 04:37:05.137000+00:00  CREATE_IN_PROGRESS  AWS::Events::Archive           mebArchive                                                                                                      Resource creation Initiated
+2022-08-24 04:37:05.110000+00:00  CREATE_COMPLETE     AWS::DynamoDB::Table           AssetEnrichments
+2022-08-24 04:37:05.075000+00:00  CREATE_COMPLETE     AWS::DynamoDB::Table           AssetProcessing
+2022-08-24 04:37:04.862000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 rekognitionStartRole
+2022-08-24 04:37:04.641000+00:00  CREATE_COMPLETE     AWS::DynamoDB::Table           Assets
+2022-08-24 04:37:04.411000+00:00  CREATE_COMPLETE     AWS::DynamoDB::Table           AssetAttributes
+2022-08-24 04:37:04.138000+00:00  CREATE_COMPLETE     AWS::DynamoDB::Table           AssetFormats
+2022-08-24 04:37:04.098000+00:00  CREATE_COMPLETE     AWS::DynamoDB::Table           Collections
+2022-08-24 04:37:02.633000+00:00  CREATE_IN_PROGRESS  AWS::Events::Archive           mebArchive
+2022-08-24 04:36:56.062000+00:00  CREATE_COMPLETE     AWS::EventSchemas::Discoverer  mebDiscovery
+2022-08-24 04:36:55.912000+00:00  CREATE_IN_PROGRESS  AWS::EventSchemas::Discoverer  mebDiscovery                                                                                                    Resource creation Initiated
+2022-08-24 04:36:54.989000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 loadKendraIndexRole                                                                                             Resource creation Initiated
+2022-08-24 04:36:54.785000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 loadKendraMetadataRole                                                                                          Resource creation Initiated
+2022-08-24 04:36:54.399000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 loadKendraIndexRole
+2022-08-24 04:36:54.314000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 loadKendraMetadataRole
+2022-08-24 04:36:53.918000+00:00  CREATE_IN_PROGRESS  AWS::EventSchemas::Discoverer  mebDiscovery
+2022-08-24 04:36:52.294000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           ErrorTable                                                                                                      Resource creation Initiated
+2022-08-24 04:36:52.241000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           AssetEnrichments                                                                                                Resource creation Initiated
+2022-08-24 04:36:52.111000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           CollectionSubscribers                                                                                           Resource creation Initiated
+2022-08-24 04:36:52.072000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           AssetHistory                                                                                                    Resource creation Initiated
+2022-08-24 04:36:51.918000+00:00  CREATE_IN_PROGRESS  AWS::SQS::Queue                comprehendlangQueue                                                                                             Resource creation Initiated
+2022-08-24 04:36:51.796000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           AssetAttributes                                                                                                 Resource creation Initiated
+2022-08-24 04:36:51.659000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           SearchAggregateTable                                                                                            Resource creation Initiated
+2022-08-24 04:36:51.571000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           Assets                                                                                                          Resource creation Initiated
+2022-08-24 04:36:51.554000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           SearchTable                                                                                                     Resource creation Initiated
+2022-08-24 04:36:51.398000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           Collections                                                                                                     Resource creation Initiated
+2022-08-24 04:36:51.369000+00:00  CREATE_IN_PROGRESS  AWS::SQS::Queue                comprehendnlpQueue                                                                                              Resource creation Initiated
+2022-08-24 04:36:51.337000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           AssetProcessing                                                                                                 Resource creation Initiated
+2022-08-24 04:36:51.216000+00:00  CREATE_COMPLETE     AWS::SNS::Topic                AmazonTextractSNS
+2022-08-24 04:36:51.134000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           AssetFormats                                                                                                    Resource creation Initiated
+2022-08-24 04:36:51.121000+00:00  CREATE_IN_PROGRESS  AWS::SQS::Queue                ingestQueue                                                                                                     Resource creation Initiated
+2022-08-24 04:36:51.076000+00:00  CREATE_COMPLETE     AWS::Events::EventBus          meb
+2022-08-24 04:36:50.904000+00:00  CREATE_IN_PROGRESS  AWS::Events::EventBus          meb                                                                                                             Resource creation Initiated
+2022-08-24 04:36:50.623000+00:00  CREATE_COMPLETE     AWS::SNS::Topic                AmazonRkFaceDetSNS
+2022-08-24 04:36:50.505000+00:00  CREATE_IN_PROGRESS  AWS::SNS::Topic                AmazonTextractSNS                                                                                               Resource creation Initiated
+2022-08-24 04:36:50.466000+00:00  CREATE_COMPLETE     AWS::SNS::Topic                AmazonTextractASNS
+2022-08-24 04:36:50.137000+00:00  CREATE_IN_PROGRESS  AWS::SNS::Topic                AmazonRkFaceDetSNS                                                                                              Resource creation Initiated
+2022-08-24 04:36:50.127000+00:00  CREATE_IN_PROGRESS  AWS::SNS::Topic                AmazonTextractASNS                                                                                              Resource creation Initiated
+2022-08-24 04:36:49.975000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3txtractA                                                                                                      Resource creation Initiated
+2022-08-24 04:36:49.821000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 elementalConvertStartRole                                                                                       Resource creation Initiated
+2022-08-24 04:36:49.752000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkSegDet                                                                                                      Resource creation Initiated
+2022-08-24 04:36:49.724000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3Transcribe                                                                                                    Resource creation Initiated
+2022-08-24 04:36:49.710000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3Kendra                                                                                                        Resource creation Initiated
+2022-08-24 04:36:49.689000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 RekognitionAccess                                                                                               Resource creation Initiated
+2022-08-24 04:36:49.667000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkFacSrch                                                                                                     Resource creation Initiated
+2022-08-24 04:36:49.662000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkCeleb                                                                                                       Resource creation Initiated
+2022-08-24 04:36:49.602000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3NlpKp                                                                                                         Resource creation Initiated
+2022-08-24 04:36:49.588000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3NlpTop                                                                                                        Resource creation Initiated
+2022-08-24 04:36:49.553000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 translateCompleteRole                                                                                           Resource creation Initiated
+2022-08-24 04:36:49.537000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkPplTrc                                                                                                      Resource creation Initiated
+2022-08-24 04:36:49.529000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkLblDet                                                                                                      Resource creation Initiated
+2022-08-24 04:36:49.526000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkMod                                                                                                         Resource creation Initiated
+2022-08-24 04:36:49.507000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           AssetEnrichments
+2022-08-24 04:36:49.496000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 loadElasticSearchRole                                                                                           Resource creation Initiated
+2022-08-24 04:36:49.480000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 transcribeStartRole                                                                                             Resource creation Initiated
+2022-08-24 04:36:49.479000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3AzureDescrImg                                                                                                 Resource creation Initiated
+2022-08-24 04:36:49.422000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkFacDet                                                                                                      Resource creation Initiated
+2022-08-24 04:36:49.414000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 elementalConvertStartRole
+2022-08-24 04:36:49.335000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3Assets                                                                                                        Resource creation Initiated
+2022-08-24 04:36:49.319000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3txtract                                                                                                       Resource creation Initiated
+2022-08-24 04:36:49.299000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 transcribeCompleteRole                                                                                          Resource creation Initiated
+2022-08-24 04:36:49.277000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3txtractA
+2022-08-24 04:36:49.253000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 ComprehendAccess                                                                                                Resource creation Initiated
+2022-08-24 04:36:49.247000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 TextractSNSRl                                                                                                   Resource creation Initiated
+2022-08-24 04:36:49.240000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 translateStartRole                                                                                              Resource creation Initiated
+2022-08-24 04:36:49.213000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3Translate                                                                                                     Resource creation Initiated
+2022-08-24 04:36:49.201000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rekognitionCompleteRole                                                                                         Resource creation Initiated
+2022-08-24 04:36:49.190000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkSegDet
+2022-08-24 04:36:49.129000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 translateCompleteRole
+2022-08-24 04:36:49.123000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           SearchTable
+2022-08-24 04:36:49.121000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 transcribeStartRole
+2022-08-24 04:36:49.118000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3txtPlain                                                                                                      Resource creation Initiated
+2022-08-24 04:36:49.117000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkCeleb
+2022-08-24 04:36:49.110000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           AssetAttributes
+2022-08-24 04:36:49.054000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 loadElasticSearchRole
+2022-08-24 04:36:49.037000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkTxtDet                                                                                                      Resource creation Initiated
+2022-08-24 04:36:49.009000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkPplTrc
+2022-08-24 04:36:48.978000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3NlpTop
+2022-08-24 04:36:48.972000+00:00  CREATE_IN_PROGRESS  AWS::SQS::Queue                comprehendlangQueue
+2022-08-24 04:36:48.956000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           SearchAggregateTable
+2022-08-24 04:36:48.945000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkMod
+2022-08-24 04:36:48.921000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkFacDet
+2022-08-24 04:36:48.916000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rekognitionStartRole                                                                                            Resource creation Initiated
+2022-08-24 04:36:48.912000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3AzureDescrImg
+2022-08-24 04:36:48.896000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkLblDet
+2022-08-24 04:36:48.874000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           Collections
+2022-08-24 04:36:48.865000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           CollectionSubscribers
+2022-08-24 04:36:48.860000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 transcribeCompleteRole
+2022-08-24 04:36:48.856000+00:00  CREATE_IN_PROGRESS  AWS::SQS::Queue                comprehendnlpQueue
+2022-08-24 04:36:48.854000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           AssetProcessing
+2022-08-24 04:36:48.848000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 ComprehendAccess
+2022-08-24 04:36:48.847000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkFacSrch
+2022-08-24 04:36:48.837000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 RekognitionAccess
+2022-08-24 04:36:48.811000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3txtract
+2022-08-24 04:36:48.795000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 elementalConvertCompleteRole                                                                                    Resource creation Initiated
+2022-08-24 04:36:48.787000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3Assets
+2022-08-24 04:36:48.779000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 translateStartRole
+2022-08-24 04:36:48.773000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 TextractSNSRl
+2022-08-24 04:36:48.744000+00:00  CREATE_IN_PROGRESS  AWS::Events::EventBus          meb
+2022-08-24 04:36:48.744000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           ErrorTable
+2022-08-24 04:36:48.738000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 loadAnalyticsStreamRole                                                                                         Resource creation Initiated
+2022-08-24 04:36:48.731000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           AssetHistory
+2022-08-24 04:36:48.720000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3Transcribe
+2022-08-24 04:36:48.689000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3Translate
+2022-08-24 04:36:48.686000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rekognitionCompleteRole
+2022-08-24 04:36:48.670000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3Kendra
+2022-08-24 04:36:48.662000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           AssetFormats
+2022-08-24 04:36:48.643000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3NlpKp
+2022-08-24 04:36:48.597000+00:00  CREATE_IN_PROGRESS  AWS::SNS::Topic                AmazonTextractSNS
+2022-08-24 04:36:48.596000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           Assets
+2022-08-24 04:36:48.507000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rekognitionStartRole
+2022-08-24 04:36:48.472000+00:00  CREATE_IN_PROGRESS  AWS::SQS::Queue                ingestQueue
+2022-08-24 04:36:48.396000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkTxtDet
+2022-08-24 04:36:48.370000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 elementalConvertCompleteRole
+2022-08-24 04:36:48.310000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3txtPlain
+2022-08-24 04:36:48.136000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 loadAnalyticsStreamRole
+2022-08-24 04:36:48.036000+00:00  CREATE_IN_PROGRESS  AWS::SNS::Topic                AmazonTextractASNS
+2022-08-24 04:36:47.875000+00:00  CREATE_IN_PROGRESS  AWS::SNS::Topic                AmazonRkFaceDetSNS
+2022-08-24 04:36:39.557000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack     tCaT-quickstart-general-dynamics-information-technology-mission-insights-gdit-b9987123238d4cbf822602e9d05da747  Transformation succeeded
+2022-08-24 04:36:26.322000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack     tCaT-quickstart-general-dynamics-information-technology-mission-insights-gdit-b9987123238d4cbf822602e9d05da747  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Tuesday, 23. August 2022 11:39PM
+-----------------------------------------------------------------------------
+

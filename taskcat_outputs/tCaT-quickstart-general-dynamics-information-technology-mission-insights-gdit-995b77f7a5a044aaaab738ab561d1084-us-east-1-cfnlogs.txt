@@ -1,0 +1,422 @@
+-----------------------------------------------------------------------------
+Region: us-east-1
+StackName: tCaT-quickstart-general-dynamics-information-technology-mission-insights-gdit-995b77f7a5a044aaaab738ab561d1084
+*****************************************************************************
+ResourceStatusReason:  
+The following resource(s) failed to create: [ingestQueuePolicy,
+comprehendnlpQueuePolicy, comprehendlangQueuePolicy].
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                   LogicalResourceId                                                                                               ResourceStatusReason
+--------------------------------  ------------------  -----------------------------  --------------------------------------------------------------------------------------------------------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2022-08-24 04:55:18.999000+00:00  CREATE_FAILED       AWS::CloudFormation::Stack     tCaT-quickstart-general-dynamics-information-technology-mission-insights-gdit-995b77f7a5a044aaaab738ab561d1084  The following resource(s) failed to create: [ingestQueuePolicy, comprehendnlpQueuePolicy, comprehendlangQueuePolicy].
+2022-08-24 04:55:01.692000+00:00  CREATE_COMPLETE     AWS::Lambda::Permission        rkImgModerationimgeventJpgPermission
+2022-08-24 04:55:01.531000+00:00  CREATE_COMPLETE     AWS::Lambda::Permission        rkImgDetectFacesimgeventPngPermission
+2022-08-24 04:55:01.424000+00:00  CREATE_COMPLETE     AWS::Lambda::Permission        rkImgDetectFacesimgeventJpgPermission
+2022-08-24 04:55:01.338000+00:00  CREATE_COMPLETE     AWS::Lambda::Permission        rkImgDetectTextimgeventJpgPermission
+2022-08-24 04:55:00.933000+00:00  CREATE_COMPLETE     AWS::Lambda::Permission        rkImgDetectLabelsimgeventPngPermission
+2022-08-24 04:55:00.585000+00:00  CREATE_COMPLETE     AWS::Lambda::Permission        rkImgDetectTextimgeventPngPermission
+2022-08-24 04:55:00.548000+00:00  CREATE_COMPLETE     AWS::Lambda::Permission        rkImgDetectLabelsimgeventJpgPermission
+2022-08-24 04:55:00.429000+00:00  CREATE_COMPLETE     AWS::Lambda::Permission        rkImgModerationimgeventPngPermission
+2022-08-24 04:55:00.288000+00:00  CREATE_COMPLETE     AWS::Lambda::Permission        rkImgDetectCelebrityimgeventPngPermission
+2022-08-24 04:54:59.210000+00:00  CREATE_COMPLETE     AWS::Lambda::Permission        rkImgDetectCelebrityimgeventJpgPermission
+2022-08-24 04:54:55.048000+00:00  CREATE_COMPLETE     AWS::Lambda::Permission        textractStartTriggerPermission
+2022-08-24 04:54:54.596000+00:00  CREATE_COMPLETE     AWS::Lambda::Permission        rkVidDetectFacesvideventMP4Permission
+2022-08-24 04:54:54.195000+00:00  CREATE_COMPLETE     AWS::Lambda::Permission        dynamodbEnrichmentsenricheventPermission
+2022-08-24 04:54:51.324000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkImgModerationimgeventJpgPermission                                                                            Resource creation Initiated
+2022-08-24 04:54:51.136000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkImgDetectFacesimgeventPngPermission                                                                           Resource creation Initiated
+2022-08-24 04:54:51.024000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkImgDetectFacesimgeventJpgPermission                                                                           Resource creation Initiated
+2022-08-24 04:54:50.908000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkImgDetectTextimgeventJpgPermission                                                                            Resource creation Initiated
+2022-08-24 04:54:50.666000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkImgDetectFacesimgeventPngPermission
+2022-08-24 04:54:50.555000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkImgModerationimgeventJpgPermission
+2022-08-24 04:54:50.516000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkImgDetectLabelsimgeventPngPermission                                                                          Resource creation Initiated
+2022-08-24 04:54:50.391000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkImgDetectTextimgeventJpgPermission
+2022-08-24 04:54:50.246000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkImgDetectTextimgeventPngPermission                                                                            Resource creation Initiated
+2022-08-24 04:54:50.239000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkImgDetectFacesimgeventJpgPermission
+2022-08-24 04:54:50.238000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkImgDetectLabelsimgeventJpgPermission                                                                          Resource creation Initiated
+2022-08-24 04:54:50.071000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkImgDetectLabelsimgeventPngPermission
+2022-08-24 04:54:49.922000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkImgDetectLabelsimgeventJpgPermission
+2022-08-24 04:54:49.854000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkImgModerationimgeventPngPermission                                                                            Resource creation Initiated
+2022-08-24 04:54:49.847000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkImgDetectCelebrityimgeventPngPermission                                                                       Resource creation Initiated
+2022-08-24 04:54:49.825000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkImgDetectTextimgeventPngPermission
+2022-08-24 04:54:49.382000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkImgModerationimgeventPngPermission
+2022-08-24 04:54:49.271000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkImgDetectCelebrityimgeventPngPermission
+2022-08-24 04:54:48.811000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkImgDetectCelebrityimgeventJpgPermission                                                                       Resource creation Initiated
+2022-08-24 04:54:48.411000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkImgDetectCelebrityimgeventJpgPermission
+2022-08-24 04:54:47.414000+00:00  CREATE_COMPLETE     AWS::Events::Rule              rkImgDetectTextimgeventJpg
+2022-08-24 04:54:47.272000+00:00  CREATE_COMPLETE     AWS::Events::Rule              rkImgModerationimgeventJpg
+2022-08-24 04:54:47.137000+00:00  CREATE_COMPLETE     AWS::Events::Rule              rkImgDetectTextimgeventPng
+2022-08-24 04:54:47.035000+00:00  CREATE_COMPLETE     AWS::Events::Rule              rkImgDetectFacesimgeventJpg
+2022-08-24 04:54:46.926000+00:00  CREATE_COMPLETE     AWS::Events::Rule              rkImgDetectFacesimgeventPng
+2022-08-24 04:54:46.801000+00:00  CREATE_COMPLETE     AWS::Events::Rule              rkImgModerationimgeventPng
+2022-08-24 04:54:46.777000+00:00  CREATE_COMPLETE     AWS::Events::Rule              rkImgDetectLabelsimgeventJpg
+2022-08-24 04:54:46.583000+00:00  CREATE_COMPLETE     AWS::Events::Rule              rkImgDetectLabelsimgeventPng
+2022-08-24 04:54:46.400000+00:00  CREATE_COMPLETE     AWS::Events::Rule              rkImgDetectCelebrityimgeventPng
+2022-08-24 04:54:45.782000+00:00  CREATE_COMPLETE     AWS::Events::Rule              rkImgDetectCelebrityimgeventJpg
+2022-08-24 04:54:44.691000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        textractStartTriggerPermission                                                                                  Resource creation Initiated
+2022-08-24 04:54:44.184000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        textractStartTriggerPermission
+2022-08-24 04:54:43.838000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        dynamodbEnrichmentsenricheventPermission                                                                        Resource creation Initiated
+2022-08-24 04:54:43.669000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkVidDetectFacesvideventMP4Permission                                                                           Resource creation Initiated
+2022-08-24 04:54:43.236000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkVidDetectFacesvideventMP4Permission
+2022-08-24 04:54:42.982000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        dynamodbEnrichmentsenricheventPermission
+2022-08-24 04:54:41.139000+00:00  CREATE_COMPLETE     AWS::Events::Rule              textractStartTrigger
+2022-08-24 04:54:40.692000+00:00  CREATE_COMPLETE     AWS::Events::Rule              rkVidDetectFacesvideventMP4
+2022-08-24 04:54:40.351000+00:00  CREATE_COMPLETE     AWS::Events::Rule              dynamodbEnrichmentsenrichevent
+2022-08-24 04:54:29.817000+00:00  CREATE_COMPLETE     AWS::Lambda::Permission        loadKendraIndexorgeventPermission
+2022-08-24 04:54:29.747000+00:00  CREATE_COMPLETE     AWS::Lambda::Permission        loadKendraIndexalteventPermission
+2022-08-24 04:54:29.382000+00:00  CREATE_COMPLETE     AWS::Lambda::Permission        loadKendraMetadataenricheventPermission
+2022-08-24 04:54:24.518000+00:00  CREATE_COMPLETE     AWS::Lambda::Permission        elementalConvertStartTriggerPermission
+2022-08-24 04:54:23.863000+00:00  CREATE_COMPLETE     AWS::Lambda::Permission        translateStartTriggerPermission
+2022-08-24 04:54:23.538000+00:00  CREATE_COMPLETE     AWS::Lambda::Permission        transcribeStartTriggerPermission
+2022-08-24 04:54:23.278000+00:00  CREATE_COMPLETE     AWS::Lambda::Permission        rekognitionStartTriggerPermission
+2022-08-24 04:54:19.506000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        loadKendraIndexorgeventPermission                                                                               Resource creation Initiated
+2022-08-24 04:54:19.349000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        loadKendraIndexalteventPermission                                                                               Resource creation Initiated
+2022-08-24 04:54:19.164000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        loadKendraIndexorgeventPermission
+2022-08-24 04:54:19.069000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        loadKendraMetadataenricheventPermission                                                                         Resource creation Initiated
+2022-08-24 04:54:18.865000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        loadKendraIndexalteventPermission
+2022-08-24 04:54:18.578000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        loadKendraMetadataenricheventPermission
+2022-08-24 04:54:16.256000+00:00  CREATE_COMPLETE     AWS::Events::Rule              loadKendraIndexorgevent
+2022-08-24 04:54:16.024000+00:00  CREATE_COMPLETE     AWS::Events::Rule              loadKendraIndexaltevent
+2022-08-24 04:54:15.660000+00:00  CREATE_COMPLETE     AWS::Events::Rule              loadKendraMetadataenrichevent
+2022-08-24 04:54:14.136000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        elementalConvertStartTriggerPermission                                                                          Resource creation Initiated
+2022-08-24 04:54:13.824000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 ingestionRole
+2022-08-24 04:54:13.660000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        elementalConvertStartTriggerPermission
+2022-08-24 04:54:13.510000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        translateStartTriggerPermission                                                                                 Resource creation Initiated
+2022-08-24 04:54:13.184000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        transcribeStartTriggerPermission                                                                                Resource creation Initiated
+2022-08-24 04:54:12.917000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rekognitionStartTriggerPermission                                                                               Resource creation Initiated
+2022-08-24 04:54:12.731000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        translateStartTriggerPermission
+2022-08-24 04:54:12.494000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rekognitionStartTriggerPermission
+2022-08-24 04:54:12.415000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        transcribeStartTriggerPermission
+2022-08-24 04:54:10.477000+00:00  CREATE_COMPLETE     AWS::Events::Rule              elementalConvertStartTrigger
+2022-08-24 04:54:09.568000+00:00  CREATE_COMPLETE     AWS::Events::Rule              transcribeStartTrigger
+2022-08-24 04:54:09.450000+00:00  CREATE_COMPLETE     AWS::Events::Rule              rekognitionStartTrigger
+2022-08-24 04:54:09.189000+00:00  CREATE_COMPLETE     AWS::Events::Rule              translateStartTrigger
+2022-08-24 04:53:55.562000+00:00  CREATE_FAILED       AWS::SQS::QueuePolicy          comprehendlangQueuePolicy                                                                                       20 actions were found in a statement from the submitted policy, max allowed is 7 (Service: AmazonSQS; Status Code: 403; Error Code: OverLimit; Request ID: 5f6e4666-074d-51d4-bd75-1d19b66ef429; Proxy: null)
+2022-08-24 04:53:55.127000+00:00  CREATE_FAILED       AWS::SQS::QueuePolicy          comprehendnlpQueuePolicy                                                                                        20 actions were found in a statement from the submitted policy, max allowed is 7 (Service: AmazonSQS; Status Code: 403; Error Code: OverLimit; Request ID: ab3edd8b-fe12-5f7d-aca2-86f44f30a29d; Proxy: null)
+2022-08-24 04:53:55.102000+00:00  CREATE_COMPLETE     AWS::Lambda::Permission        textractCompleteTextractASNSEvent2Permission
+2022-08-24 04:53:54.841000+00:00  CREATE_IN_PROGRESS  AWS::SQS::QueuePolicy          comprehendlangQueuePolicy
+2022-08-24 04:53:54.758000+00:00  CREATE_COMPLETE     AWS::Lambda::Permission        textractCompleteTextractSNSEvent1Permission
+2022-08-24 04:53:54.581000+00:00  CREATE_FAILED       AWS::SQS::QueuePolicy          ingestQueuePolicy                                                                                               20 actions were found in a statement from the submitted policy, max allowed is 7 (Service: AmazonSQS; Status Code: 403; Error Code: OverLimit; Request ID: 92b4942b-f457-5b61-bf1d-cf5445754bb6; Proxy: null)
+2022-08-24 04:53:54.237000+00:00  CREATE_IN_PROGRESS  AWS::SQS::QueuePolicy          comprehendnlpQueuePolicy
+2022-08-24 04:53:53.835000+00:00  CREATE_IN_PROGRESS  AWS::SQS::QueuePolicy          ingestQueuePolicy
+2022-08-24 04:53:53.570000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 ingestionRole                                                                                                   Resource creation Initiated
+2022-08-24 04:53:53.100000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 ingestionRole
+2022-08-24 04:53:52.446000+00:00  CREATE_COMPLETE     AWS::Lambda::Permission        rkVidDetectFacesCompleterkvdfacdetSNSEvent1Permission
+2022-08-24 04:53:51.148000+00:00  CREATE_COMPLETE     AWS::SQS::Queue                comprehendlangQueue
+2022-08-24 04:53:50.428000+00:00  CREATE_COMPLETE     AWS::SQS::Queue                comprehendnlpQueue
+2022-08-24 04:53:49.616000+00:00  CREATE_COMPLETE     AWS::SQS::Queue                ingestQueue
+2022-08-24 04:53:46.757000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rkImgDetectTextimgeventJpg                                                                                      Resource creation Initiated
+2022-08-24 04:53:46.520000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rkImgModerationimgeventJpg                                                                                      Resource creation Initiated
+2022-08-24 04:53:46.431000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rkImgDetectTextimgeventPng                                                                                      Resource creation Initiated
+2022-08-24 04:53:46.190000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rkImgDetectFacesimgeventPng                                                                                     Resource creation Initiated
+2022-08-24 04:53:46.104000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rkImgDetectLabelsimgeventJpg                                                                                    Resource creation Initiated
+2022-08-24 04:53:46.088000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rkImgDetectTextimgeventJpg
+2022-08-24 04:53:46.059000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rkImgModerationimgeventPng                                                                                      Resource creation Initiated
+2022-08-24 04:53:45.992000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rkImgDetectFacesimgeventJpg                                                                                     Resource creation Initiated
+2022-08-24 04:53:45.911000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rkImgDetectTextimgeventPng
+2022-08-24 04:53:45.908000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rkImgDetectLabelsimgeventPng                                                                                    Resource creation Initiated
+2022-08-24 04:53:45.786000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rkImgModerationimgeventJpg
+2022-08-24 04:53:45.717000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rkImgDetectLabelsimgeventJpg
+2022-08-24 04:53:45.526000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rkImgDetectFacesimgeventJpg
+2022-08-24 04:53:45.452000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rkImgDetectLabelsimgeventPng
+2022-08-24 04:53:45.399000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rkImgModerationimgeventPng
+2022-08-24 04:53:45.390000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rkImgDetectFacesimgeventPng
+2022-08-24 04:53:45.364000+00:00  CREATE_COMPLETE     AWS::SNS::Subscription         textractCompleteTextractASNSEvent2
+2022-08-24 04:53:45.291000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rkImgDetectCelebrityimgeventPng                                                                                 Resource creation Initiated
+2022-08-24 04:53:45.184000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rkImgDetectCelebrityimgeventJpg                                                                                 Resource creation Initiated
+2022-08-24 04:53:45.117000+00:00  CREATE_IN_PROGRESS  AWS::SNS::Subscription         textractCompleteTextractASNSEvent2                                                                              Resource creation Initiated
+2022-08-24 04:53:44.858000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rkImgDetectCelebrityimgeventPng
+2022-08-24 04:53:44.777000+00:00  CREATE_COMPLETE     AWS::SNS::Subscription         textractCompleteTextractSNSEvent1
+2022-08-24 04:53:44.724000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rkImgDetectCelebrityimgeventJpg
+2022-08-24 04:53:44.620000+00:00  CREATE_IN_PROGRESS  AWS::SNS::Subscription         textractCompleteTextractSNSEvent1                                                                               Resource creation Initiated
+2022-08-24 04:53:44.454000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        textractCompleteTextractASNSEvent2Permission                                                                    Resource creation Initiated
+2022-08-24 04:53:44.353000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        textractCompleteTextractSNSEvent1Permission                                                                     Resource creation Initiated
+2022-08-24 04:53:44.097000+00:00  CREATE_IN_PROGRESS  AWS::SNS::Subscription         textractCompleteTextractASNSEvent2
+2022-08-24 04:53:43.961000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        textractCompleteTextractASNSEvent2Permission
+2022-08-24 04:53:43.812000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        textractCompleteTextractSNSEvent1Permission
+2022-08-24 04:53:43.765000+00:00  CREATE_IN_PROGRESS  AWS::SNS::Subscription         textractCompleteTextractSNSEvent1
+2022-08-24 04:53:43.055000+00:00  CREATE_COMPLETE     AWS::Lambda::Function          rkImgDetectText
+2022-08-24 04:53:42.830000+00:00  CREATE_COMPLETE     AWS::Lambda::Function          rkImgDetectLabels
+2022-08-24 04:53:42.752000+00:00  CREATE_COMPLETE     AWS::SNS::Subscription         rkVidDetectFacesCompleterkvdfacdetSNSEvent1
+2022-08-24 04:53:42.615000+00:00  CREATE_IN_PROGRESS  AWS::SNS::Subscription         rkVidDetectFacesCompleterkvdfacdetSNSEvent1                                                                     Resource creation Initiated
+2022-08-24 04:53:42.584000+00:00  CREATE_COMPLETE     AWS::Lambda::Function          rkImgModeration
+2022-08-24 04:53:42.489000+00:00  CREATE_COMPLETE     AWS::Lambda::Function          rkImgDetectFaces
+2022-08-24 04:53:42.050000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkVidDetectFacesCompleterkvdfacdetSNSEvent1Permission                                                           Resource creation Initiated
+2022-08-24 04:53:41.873000+00:00  CREATE_COMPLETE     AWS::Lambda::Function          rkImgDetectCelebrity
+2022-08-24 04:53:41.803000+00:00  CREATE_IN_PROGRESS  AWS::SNS::Subscription         rkVidDetectFacesCompleterkvdfacdetSNSEvent1
+2022-08-24 04:53:41.560000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Permission        rkVidDetectFacesCompleterkvdfacdetSNSEvent1Permission
+2022-08-24 04:53:40.866000+00:00  CREATE_COMPLETE     AWS::Lambda::Function          textractComplete
+2022-08-24 04:53:40.357000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              textractStartTrigger                                                                                            Resource creation Initiated
+2022-08-24 04:53:39.888000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              textractStartTrigger
+2022-08-24 04:53:39.627000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              dynamodbEnrichmentsenrichevent                                                                                  Resource creation Initiated
+2022-08-24 04:53:39.505000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rkVidDetectFacesvideventMP4                                                                                     Resource creation Initiated
+2022-08-24 04:53:39.230000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              dynamodbEnrichmentsenrichevent
+2022-08-24 04:53:39.119000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rkVidDetectFacesvideventMP4
+2022-08-24 04:53:38.818000+00:00  CREATE_COMPLETE     AWS::Lambda::Function          rkVidDetectFacesComplete
+2022-08-24 04:53:37.336000+00:00  CREATE_COMPLETE     AWS::Lambda::Function          textractStart
+2022-08-24 04:53:36.865000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkImgDetectText                                                                                                 Resource creation Initiated
+2022-08-24 04:53:36.557000+00:00  CREATE_COMPLETE     AWS::Lambda::Function          dynamodbEnrichments
+2022-08-24 04:53:36.499000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkImgDetectLabels                                                                                               Resource creation Initiated
+2022-08-24 04:53:36.377000+00:00  CREATE_COMPLETE     AWS::Lambda::Function          rkVidDetectFaces
+2022-08-24 04:53:36.262000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkImgModeration                                                                                                 Resource creation Initiated
+2022-08-24 04:53:36.145000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkImgDetectFaces                                                                                                Resource creation Initiated
+2022-08-24 04:53:35.929000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkImgDetectCelebrity                                                                                            Resource creation Initiated
+2022-08-24 04:53:34.673000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkImgDetectText
+2022-08-24 04:53:34.428000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          textractComplete                                                                                                Resource creation Initiated
+2022-08-24 04:53:34.354000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkImgDetectLabels
+2022-08-24 04:53:34.149000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkImgModeration
+2022-08-24 04:53:33.957000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkImgDetectFaces
+2022-08-24 04:53:33.317000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkImgDetectCelebrity
+2022-08-24 04:53:32.609000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkVidDetectFacesComplete                                                                                        Resource creation Initiated
+2022-08-24 04:53:31.915000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          textractComplete
+2022-08-24 04:53:31.740000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          textractStart                                                                                                   Resource creation Initiated
+2022-08-24 04:53:31.188000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 rkImgDetectTextRole
+2022-08-24 04:53:30.935000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          dynamodbEnrichments                                                                                             Resource creation Initiated
+2022-08-24 04:53:30.862000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 rkImgDetectLabelsRole
+2022-08-24 04:53:30.633000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 rkImgDetectFacesRole
+2022-08-24 04:53:30.536000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 rkImgModerationRole
+2022-08-24 04:53:30.213000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkVidDetectFaces                                                                                                Resource creation Initiated
+2022-08-24 04:53:30.152000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkVidDetectFacesComplete
+2022-08-24 04:53:30.066000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 rkImgDetectCelebrityRole
+2022-08-24 04:53:29.712000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          textractStart
+2022-08-24 04:53:29.044000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          dynamodbEnrichments
+2022-08-24 04:53:28.486000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 textractCompleteRole
+2022-08-24 04:53:28.420000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rkVidDetectFaces
+2022-08-24 04:53:26.860000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 rkVidDetectFacesCompleteRole
+2022-08-24 04:53:26.421000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 textractStartRole
+2022-08-24 04:53:26.210000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 dynamodbEnrichmentsRole
+2022-08-24 04:53:24.739000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 rkVidDetectFacesRole
+2022-08-24 04:53:15.354000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              loadKendraIndexaltevent                                                                                         Resource creation Initiated
+2022-08-24 04:53:15.158000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              loadKendraIndexorgevent                                                                                         Resource creation Initiated
+2022-08-24 04:53:14.889000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              loadKendraIndexaltevent
+2022-08-24 04:53:14.750000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              loadKendraMetadataenrichevent                                                                                   Resource creation Initiated
+2022-08-24 04:53:14.696000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              loadKendraIndexorgevent
+2022-08-24 04:53:14.361000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              loadKendraMetadataenrichevent
+2022-08-24 04:53:11.613000+00:00  CREATE_COMPLETE     AWS::Lambda::Function          loadKendraIndex
+2022-08-24 04:53:11.180000+00:00  CREATE_COMPLETE     AWS::Lambda::Function          loadKendraMetadata
+2022-08-24 04:53:09.590000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              elementalConvertStartTrigger                                                                                    Resource creation Initiated
+2022-08-24 04:53:09.180000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              elementalConvertStartTrigger
+2022-08-24 04:53:08.812000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rekognitionStartTrigger                                                                                         Resource creation Initiated
+2022-08-24 04:53:08.669000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              transcribeStartTrigger                                                                                          Resource creation Initiated
+2022-08-24 04:53:08.523000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              translateStartTrigger                                                                                           Resource creation Initiated
+2022-08-24 04:53:08.381000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              rekognitionStartTrigger
+2022-08-24 04:53:08.241000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              transcribeStartTrigger
+2022-08-24 04:53:08.090000+00:00  CREATE_IN_PROGRESS  AWS::Events::Rule              translateStartTrigger
+2022-08-24 04:53:07.831000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkImgDetectLabelsRole                                                                                           Resource creation Initiated
+2022-08-24 04:53:07.403000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkImgDetectLabelsRole
+2022-08-24 04:53:07.290000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkImgModerationRole                                                                                             Resource creation Initiated
+2022-08-24 04:53:07.262000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkImgDetectTextRole                                                                                             Resource creation Initiated
+2022-08-24 04:53:07.200000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 dynamodbEnrichmentsRole                                                                                         Resource creation Initiated
+2022-08-24 04:53:07.144000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkImgDetectCelebrityRole                                                                                        Resource creation Initiated
+2022-08-24 04:53:07.136000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkImgDetectFacesRole                                                                                            Resource creation Initiated
+2022-08-24 04:53:06.803000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 dynamodbEnrichmentsRole
+2022-08-24 04:53:06.782000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkImgDetectTextRole
+2022-08-24 04:53:06.756000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkImgModerationRole
+2022-08-24 04:53:06.749000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkImgDetectCelebrityRole
+2022-08-24 04:53:06.727000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkImgDetectFacesRole
+2022-08-24 04:53:06.470000+00:00  CREATE_COMPLETE     AWS::Lambda::Function          loadAnalyticsStream
+2022-08-24 04:53:06.166000+00:00  CREATE_COMPLETE     AWS::Lambda::Function          elementalConvertStart
+2022-08-24 04:53:05.844000+00:00  CREATE_COMPLETE     AWS::Lambda::Function          rekognitionComplete
+2022-08-24 04:53:05.768000+00:00  CREATE_COMPLETE     AWS::Lambda::Function          transcribeComplete
+2022-08-24 04:53:05.688000+00:00  CREATE_COMPLETE     AWS::Lambda::Function          rekognitionStart
+2022-08-24 04:53:05.534000+00:00  CREATE_COMPLETE     AWS::Lambda::Function          translateComplete
+2022-08-24 04:53:05.508000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          loadKendraIndex                                                                                                 Resource creation Initiated
+2022-08-24 04:53:05.418000+00:00  CREATE_COMPLETE     AWS::Lambda::Function          loadElasticSearch
+2022-08-24 04:53:05.416000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          loadKendraMetadata                                                                                              Resource creation Initiated
+2022-08-24 04:53:04.943000+00:00  CREATE_COMPLETE     AWS::Lambda::Function          translateStart
+2022-08-24 04:53:04.942000+00:00  CREATE_COMPLETE     AWS::Lambda::Function          transcribeStart
+2022-08-24 04:53:04.559000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkVidDetectFacesCompleteRole                                                                                    Resource creation Initiated
+2022-08-24 04:53:04.388000+00:00  CREATE_COMPLETE     AWS::Lambda::Function          elementalConvertComplete
+2022-08-24 04:53:04.218000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkVidDetectFacesRole                                                                                            Resource creation Initiated
+2022-08-24 04:53:04.178000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 textractCompleteRole                                                                                            Resource creation Initiated
+2022-08-24 04:53:03.959000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 textractStartRole                                                                                               Resource creation Initiated
+2022-08-24 04:53:03.930000+00:00  CREATE_COMPLETE     AWS::DynamoDB::Table           SearchAggregateTable
+2022-08-24 04:53:03.899000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkVidDetectFacesCompleteRole
+2022-08-24 04:53:03.751000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 textractCompleteRole
+2022-08-24 04:53:03.588000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rkVidDetectFacesRole
+2022-08-24 04:53:03.473000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 textractStartRole
+2022-08-24 04:53:03.200000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          loadKendraMetadata
+2022-08-24 04:53:02.874000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          loadKendraIndex
+2022-08-24 04:53:02.803000+00:00  CREATE_COMPLETE     AWS::DynamoDB::Table           SearchTable
+2022-08-24 04:53:00.222000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          loadAnalyticsStream                                                                                             Resource creation Initiated
+2022-08-24 04:53:00.004000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3Transcribe
+2022-08-24 04:53:00.003000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3AzureDescrImg
+2022-08-24 04:52:59.906000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3Assets
+2022-08-24 04:52:59.892000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3RkFacSrch
+2022-08-24 04:52:59.759000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          elementalConvertStart                                                                                           Resource creation Initiated
+2022-08-24 04:52:59.748000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3RkTxtDet
+2022-08-24 04:52:59.679000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rekognitionStart                                                                                                Resource creation Initiated
+2022-08-24 04:52:59.628000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rekognitionComplete                                                                                             Resource creation Initiated
+2022-08-24 04:52:59.598000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3txtractA
+2022-08-24 04:52:59.586000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 loadKendraMetadataRole
+2022-08-24 04:52:59.569000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3Translate
+2022-08-24 04:52:59.557000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 loadKendraIndexRole
+2022-08-24 04:52:59.534000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3RkLblDet
+2022-08-24 04:52:59.459000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          transcribeComplete                                                                                              Resource creation Initiated
+2022-08-24 04:52:59.363000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3RkFacDet
+2022-08-24 04:52:59.335000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3Kendra
+2022-08-24 04:52:59.278000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3NlpKp
+2022-08-24 04:52:59.258000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3txtract
+2022-08-24 04:52:59.251000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3RkMod
+2022-08-24 04:52:59.186000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          translateComplete                                                                                               Resource creation Initiated
+2022-08-24 04:52:59.175000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3RkPplTrc
+2022-08-24 04:52:59.092000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          translateStart                                                                                                  Resource creation Initiated
+2022-08-24 04:52:59.085000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3txtPlain
+2022-08-24 04:52:59.068000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3RkCeleb
+2022-08-24 04:52:59.047000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          loadElasticSearch                                                                                               Resource creation Initiated
+2022-08-24 04:52:58.934000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3RkSegDet
+2022-08-24 04:52:58.679000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          elementalConvertComplete                                                                                        Resource creation Initiated
+2022-08-24 04:52:58.610000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          transcribeStart                                                                                                 Resource creation Initiated
+2022-08-24 04:52:58.608000+00:00  CREATE_COMPLETE     AWS::S3::Bucket                S3NlpTop
+2022-08-24 04:52:57.688000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          elementalConvertStart
+2022-08-24 04:52:57.520000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rekognitionStart
+2022-08-24 04:52:57.346000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          rekognitionComplete
+2022-08-24 04:52:57.186000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          loadElasticSearch
+2022-08-24 04:52:57.108000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          translateComplete
+2022-08-24 04:52:56.971000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          transcribeComplete
+2022-08-24 04:52:56.892000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          loadAnalyticsStream
+2022-08-24 04:52:56.762000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          elementalConvertComplete
+2022-08-24 04:52:56.726000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          translateStart
+2022-08-24 04:52:56.200000+00:00  CREATE_IN_PROGRESS  AWS::Lambda::Function          transcribeStart
+2022-08-24 04:52:55.816000+00:00  CREATE_COMPLETE     AWS::DynamoDB::Table           AssetProcessing
+2022-08-24 04:52:54.648000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 TextractSNSRl
+2022-08-24 04:52:54.442000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 elementalConvertStartRole
+2022-08-24 04:52:54.339000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 RekognitionAccess
+2022-08-24 04:52:54.306000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 rekognitionStartRole
+2022-08-24 04:52:54.218000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 translateCompleteRole
+2022-08-24 04:52:54.133000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 rekognitionCompleteRole
+2022-08-24 04:52:53.920000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 loadAnalyticsStreamRole
+2022-08-24 04:52:53.797000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 elementalConvertCompleteRole
+2022-08-24 04:52:53.758000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 transcribeCompleteRole
+2022-08-24 04:52:53.687000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 translateStartRole
+2022-08-24 04:52:53.635000+00:00  CREATE_COMPLETE     AWS::DynamoDB::Table           AssetFormats
+2022-08-24 04:52:53.528000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 loadElasticSearchRole
+2022-08-24 04:52:53.181000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 ComprehendAccess
+2022-08-24 04:52:53.178000+00:00  CREATE_COMPLETE     AWS::DynamoDB::Table           Collections
+2022-08-24 04:52:53.063000+00:00  CREATE_COMPLETE     AWS::IAM::Role                 transcribeStartRole
+2022-08-24 04:52:52.821000+00:00  CREATE_COMPLETE     AWS::DynamoDB::Table           ErrorTable
+2022-08-24 04:52:52.755000+00:00  CREATE_COMPLETE     AWS::DynamoDB::Table           AssetHistory
+2022-08-24 04:52:52.585000+00:00  CREATE_COMPLETE     AWS::DynamoDB::Table           AssetEnrichments
+2022-08-24 04:52:52.399000+00:00  CREATE_COMPLETE     AWS::DynamoDB::Table           AssetAttributes
+2022-08-24 04:52:52.159000+00:00  CREATE_COMPLETE     AWS::DynamoDB::Table           Assets
+2022-08-24 04:52:52.002000+00:00  CREATE_COMPLETE     AWS::DynamoDB::Table           CollectionSubscribers
+2022-08-24 04:52:45.551000+00:00  CREATE_COMPLETE     AWS::Events::Archive           mebArchive
+2022-08-24 04:52:44.779000+00:00  CREATE_IN_PROGRESS  AWS::Events::Archive           mebArchive                                                                                                      Resource creation Initiated
+2022-08-24 04:52:44.051000+00:00  CREATE_COMPLETE     AWS::EventSchemas::Discoverer  mebDiscovery
+2022-08-24 04:52:43.884000+00:00  CREATE_IN_PROGRESS  AWS::EventSchemas::Discoverer  mebDiscovery                                                                                                    Resource creation Initiated
+2022-08-24 04:52:42.429000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           AssetProcessing                                                                                                 Resource creation Initiated
+2022-08-24 04:52:42.029000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 loadKendraIndexRole                                                                                             Resource creation Initiated
+2022-08-24 04:52:41.924000+00:00  CREATE_IN_PROGRESS  AWS::EventSchemas::Discoverer  mebDiscovery
+2022-08-24 04:52:41.717000+00:00  CREATE_IN_PROGRESS  AWS::Events::Archive           mebArchive
+2022-08-24 04:52:41.656000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 loadKendraIndexRole
+2022-08-24 04:52:41.586000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 loadKendraMetadataRole                                                                                          Resource creation Initiated
+2022-08-24 04:52:41.164000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 loadKendraMetadataRole
+2022-08-24 04:52:40.819000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           AssetFormats                                                                                                    Resource creation Initiated
+2022-08-24 04:52:40.261000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           ErrorTable                                                                                                      Resource creation Initiated
+2022-08-24 04:52:40.168000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           SearchAggregateTable                                                                                            Resource creation Initiated
+2022-08-24 04:52:40.013000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           Collections                                                                                                     Resource creation Initiated
+2022-08-24 04:52:39.667000+00:00  CREATE_COMPLETE     AWS::SNS::Topic                AmazonRkFaceDetSNS
+2022-08-24 04:52:39.618000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           Assets                                                                                                          Resource creation Initiated
+2022-08-24 04:52:39.606000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           AssetAttributes                                                                                                 Resource creation Initiated
+2022-08-24 04:52:39.570000+00:00  CREATE_COMPLETE     AWS::SNS::Topic                AmazonTextractASNS
+2022-08-24 04:52:39.543000+00:00  CREATE_IN_PROGRESS  AWS::SQS::Queue                comprehendlangQueue                                                                                             Resource creation Initiated
+2022-08-24 04:52:39.540000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           SearchTable                                                                                                     Resource creation Initiated
+2022-08-24 04:52:39.500000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           AssetHistory                                                                                                    Resource creation Initiated
+2022-08-24 04:52:39.420000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           AssetEnrichments                                                                                                Resource creation Initiated
+2022-08-24 04:52:39.401000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           CollectionSubscribers                                                                                           Resource creation Initiated
+2022-08-24 04:52:39.364000+00:00  CREATE_COMPLETE     AWS::SNS::Topic                AmazonTextractSNS
+2022-08-24 04:52:39.219000+00:00  CREATE_IN_PROGRESS  AWS::SNS::Topic                AmazonTextractASNS                                                                                              Resource creation Initiated
+2022-08-24 04:52:39.207000+00:00  CREATE_IN_PROGRESS  AWS::SNS::Topic                AmazonRkFaceDetSNS                                                                                              Resource creation Initiated
+2022-08-24 04:52:38.850000+00:00  CREATE_COMPLETE     AWS::Events::EventBus          meb
+2022-08-24 04:52:38.843000+00:00  CREATE_IN_PROGRESS  AWS::SNS::Topic                AmazonTextractSNS                                                                                               Resource creation Initiated
+2022-08-24 04:52:38.703000+00:00  CREATE_IN_PROGRESS  AWS::Events::EventBus          meb                                                                                                             Resource creation Initiated
+2022-08-24 04:52:38.576000+00:00  CREATE_IN_PROGRESS  AWS::SQS::Queue                comprehendnlpQueue                                                                                              Resource creation Initiated
+2022-08-24 04:52:38.470000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3Transcribe                                                                                                    Resource creation Initiated
+2022-08-24 04:52:38.363000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 TextractSNSRl                                                                                                   Resource creation Initiated
+2022-08-24 04:52:38.301000+00:00  CREATE_IN_PROGRESS  AWS::SQS::Queue                ingestQueue                                                                                                     Resource creation Initiated
+2022-08-24 04:52:38.255000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           AssetFormats
+2022-08-24 04:52:38.228000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkTxtDet                                                                                                      Resource creation Initiated
+2022-08-24 04:52:38.215000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 elementalConvertStartRole                                                                                       Resource creation Initiated
+2022-08-24 04:52:38.175000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 translateCompleteRole                                                                                           Resource creation Initiated
+2022-08-24 04:52:38.170000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3Assets                                                                                                        Resource creation Initiated
+2022-08-24 04:52:38.063000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 RekognitionAccess                                                                                               Resource creation Initiated
+2022-08-24 04:52:37.988000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkMod                                                                                                         Resource creation Initiated
+2022-08-24 04:52:37.978000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rekognitionCompleteRole                                                                                         Resource creation Initiated
+2022-08-24 04:52:37.949000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 loadAnalyticsStreamRole                                                                                         Resource creation Initiated
+2022-08-24 04:52:37.913000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 TextractSNSRl
+2022-08-24 04:52:37.906000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3Translate                                                                                                     Resource creation Initiated
+2022-08-24 04:52:37.857000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3AzureDescrImg                                                                                                 Resource creation Initiated
+2022-08-24 04:52:37.821000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 transcribeCompleteRole                                                                                          Resource creation Initiated
+2022-08-24 04:52:37.801000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 elementalConvertStartRole
+2022-08-24 04:52:37.782000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkLblDet                                                                                                      Resource creation Initiated
+2022-08-24 04:52:37.753000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3Transcribe
+2022-08-24 04:52:37.750000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rekognitionStartRole                                                                                            Resource creation Initiated
+2022-08-24 04:52:37.748000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3txtractA                                                                                                      Resource creation Initiated
+2022-08-24 04:52:37.740000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3Kendra                                                                                                        Resource creation Initiated
+2022-08-24 04:52:37.695000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 translateStartRole                                                                                              Resource creation Initiated
+2022-08-24 04:52:37.689000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkPplTrc                                                                                                      Resource creation Initiated
+2022-08-24 04:52:37.581000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkFacSrch                                                                                                     Resource creation Initiated
+2022-08-24 04:52:37.577000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkTxtDet
+2022-08-24 04:52:37.576000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkFacDet                                                                                                      Resource creation Initiated
+2022-08-24 04:52:37.572000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 RekognitionAccess
+2022-08-24 04:52:37.564000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 loadElasticSearchRole                                                                                           Resource creation Initiated
+2022-08-24 04:52:37.523000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           SearchAggregateTable
+2022-08-24 04:52:37.517000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkSegDet                                                                                                      Resource creation Initiated
+2022-08-24 04:52:37.491000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 translateCompleteRole
+2022-08-24 04:52:37.484000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkMod
+2022-08-24 04:52:37.467000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 elementalConvertCompleteRole                                                                                    Resource creation Initiated
+2022-08-24 04:52:37.438000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3NlpKp                                                                                                         Resource creation Initiated
+2022-08-24 04:52:37.424000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           Collections
+2022-08-24 04:52:37.420000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3txtPlain                                                                                                      Resource creation Initiated
+2022-08-24 04:52:37.376000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 transcribeCompleteRole
+2022-08-24 04:52:37.366000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkCeleb                                                                                                       Resource creation Initiated
+2022-08-24 04:52:37.361000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 loadAnalyticsStreamRole
+2022-08-24 04:52:37.356000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rekognitionCompleteRole
+2022-08-24 04:52:37.354000+00:00  CREATE_IN_PROGRESS  AWS::SQS::Queue                comprehendlangQueue
+2022-08-24 04:52:37.319000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3Translate
+2022-08-24 04:52:37.294000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 rekognitionStartRole
+2022-08-24 04:52:37.280000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           SearchTable
+2022-08-24 04:52:37.265000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3Assets
+2022-08-24 04:52:37.252000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 translateStartRole
+2022-08-24 04:52:37.239000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3txtract                                                                                                       Resource creation Initiated
+2022-08-24 04:52:37.238000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3txtractA
+2022-08-24 04:52:37.216000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3AzureDescrImg
+2022-08-24 04:52:37.197000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkLblDet
+2022-08-24 04:52:37.179000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           ErrorTable
+2022-08-24 04:52:37.153000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           Assets
+2022-08-24 04:52:37.149000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 loadElasticSearchRole
+2022-08-24 04:52:37.123000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3Kendra
+2022-08-24 04:52:37.120000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 ComprehendAccess                                                                                                Resource creation Initiated
+2022-08-24 04:52:37.115000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 transcribeStartRole                                                                                             Resource creation Initiated
+2022-08-24 04:52:37.111000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           AssetAttributes
+2022-08-24 04:52:37.092000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3NlpTop                                                                                                        Resource creation Initiated
+2022-08-24 04:52:37.061000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           CollectionSubscribers
+2022-08-24 04:52:37+00:00         CREATE_IN_PROGRESS  AWS::DynamoDB::Table           AssetProcessing
+2022-08-24 04:52:36.995000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           AssetHistory
+2022-08-24 04:52:36.970000+00:00  CREATE_IN_PROGRESS  AWS::Events::EventBus          meb
+2022-08-24 04:52:36.961000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkFacSrch
+2022-08-24 04:52:36.952000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkSegDet
+2022-08-24 04:52:36.925000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkPplTrc
+2022-08-24 04:52:36.908000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkCeleb
+2022-08-24 04:52:36.906000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3RkFacDet
+2022-08-24 04:52:36.904000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 elementalConvertCompleteRole
+2022-08-24 04:52:36.876000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3txtPlain
+2022-08-24 04:52:36.874000+00:00  CREATE_IN_PROGRESS  AWS::SQS::Queue                comprehendnlpQueue
+2022-08-24 04:52:36.803000+00:00  CREATE_IN_PROGRESS  AWS::DynamoDB::Table           AssetEnrichments
+2022-08-24 04:52:36.784000+00:00  CREATE_IN_PROGRESS  AWS::SNS::Topic                AmazonTextractASNS
+2022-08-24 04:52:36.747000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 transcribeStartRole
+2022-08-24 04:52:36.733000+00:00  CREATE_IN_PROGRESS  AWS::SNS::Topic                AmazonTextractSNS
+2022-08-24 04:52:36.713000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3txtract
+2022-08-24 04:52:36.672000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                 ComprehendAccess
+2022-08-24 04:52:36.644000+00:00  CREATE_IN_PROGRESS  AWS::SNS::Topic                AmazonRkFaceDetSNS
+2022-08-24 04:52:36.635000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3NlpKp
+2022-08-24 04:52:36.578000+00:00  CREATE_IN_PROGRESS  AWS::S3::Bucket                S3NlpTop
+2022-08-24 04:52:36.515000+00:00  CREATE_IN_PROGRESS  AWS::SQS::Queue                ingestQueue
+2022-08-24 04:52:27.647000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack     tCaT-quickstart-general-dynamics-information-technology-mission-insights-gdit-995b77f7a5a044aaaab738ab561d1084  Transformation succeeded
+2022-08-24 04:52:14.310000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack     tCaT-quickstart-general-dynamics-information-technology-mission-insights-gdit-995b77f7a5a044aaaab738ab561d1084  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Tuesday, 23. August 2022 11:56PM
+-----------------------------------------------------------------------------
+
