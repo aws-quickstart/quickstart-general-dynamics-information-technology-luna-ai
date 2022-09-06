@@ -1962,7 +1962,7 @@ Resources:
         - Sid: LangSID
           Effect: Allow
           Principal: '*'
-          Action: '*'
+          Action: "sqs:*"
           Resource: !GetAtt comprehendlangQueue.Arn
 
   S3NlpLang:
