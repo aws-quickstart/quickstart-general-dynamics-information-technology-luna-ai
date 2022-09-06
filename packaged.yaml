@@ -2105,6 +2105,7 @@ Resources:
         config:
           ignore_checks:
           - EPolicyWildcardPrincipal
+          - EIAMPolicyActionWildcard
     Properties:
       Queues:
       - Ref: ingestQueue
@@ -2112,34 +2113,11 @@ Resources:
         Version: '2012-10-17'
         Id: IngestID
         Statement:
-        - Sid: ingestSID
-          Effect: Allow
-          Principal: '*'
-          Action:
-          - sqs:DeleteMessage
-          - sqs:GetQueueUrl
-          - sqs:DeleteMessageBatch
-          - sqs:UntagQueue
-          - sqs:CreateQueue
-          - sqs:AddPermission
-          - sqs:ChangeMessageVisibility
-          - sqs:SendMessage
-          - sqs:ListQueueTags
-          - sqs:ReceiveMessage
-          - sqs:GetQueueAttributes
-          - sqs:ChangeMessageVisibilityBatch
-          - sqs:PurgeQueue
-          - sqs:TagQueue
-          - sqs:ListDeadLetterSourceQueues
-          - sqs:ListQueues
-          - sqs:SendMessageBatch
-          - sqs:DeleteQueue
-          - sqs:SetQueueAttributes
-          - sqs:RemovePermission
-          Resource:
-            Fn::GetAtt:
-            - ingestQueue
-            - Arn
+          - Sid: "ingestSID"
+            Effect: Allow
+            Principal: "*"
+            Action: "sqs:*"
+            Resource: !GetAtt ingestQueue.Arn
   S3ingest:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
@@ -2174,6 +2152,7 @@ Resources:
         config:
           ignore_checks:
           - EPolicyWildcardPrincipal
+          - EIAMPolicyActionWildcard
     Properties:
       Queues:
       - Ref: comprehendlangQueue
@@ -2184,31 +2163,8 @@ Resources:
         - Sid: LangSID
           Effect: Allow
           Principal: '*'
-          Action:
-          - sqs:DeleteMessage
-          - sqs:GetQueueUrl
-          - sqs:DeleteMessageBatch
-          - sqs:UntagQueue
-          - sqs:CreateQueue
-          - sqs:AddPermission
-          - sqs:ChangeMessageVisibility
-          - sqs:SendMessage
-          - sqs:ListQueueTags
-          - sqs:ReceiveMessage
-          - sqs:GetQueueAttributes
-          - sqs:ChangeMessageVisibilityBatch
-          - sqs:PurgeQueue
-          - sqs:TagQueue
-          - sqs:ListDeadLetterSourceQueues
-          - sqs:ListQueues
-          - sqs:SendMessageBatch
-          - sqs:DeleteQueue
-          - sqs:SetQueueAttributes
-          - sqs:RemovePermission
-          Resource:
-            Fn::GetAtt:
-            - comprehendlangQueue
-            - Arn
+          Action: '*'
+          Resource: !GetAtt comprehendlangQueue.Arn
   S3NlpLang:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
@@ -2248,41 +2204,19 @@ Resources:
         config:
           ignore_checks:
           - EPolicyWildcardPrincipal
+          - EIAMPolicyActionWildcard
     Properties:
       Queues:
       - Ref: comprehendnlpQueue
       PolicyDocument:
         Version: '2012-10-17'
         Id: nlpID
-        Statement:
-        - Sid: nlpSID
-          Effect: Allow
-          Principal: '*'
-          Action:
-          - sqs:DeleteMessage
-          - sqs:GetQueueUrl
-          - sqs:DeleteMessageBatch
-          - sqs:UntagQueue
-          - sqs:CreateQueue
-          - sqs:AddPermission
-          - sqs:ChangeMessageVisibility
-          - sqs:SendMessage
-          - sqs:ListQueueTags
-          - sqs:ReceiveMessage
-          - sqs:GetQueueAttributes
-          - sqs:ChangeMessageVisibilityBatch
-          - sqs:PurgeQueue
-          - sqs:TagQueue
-          - sqs:ListDeadLetterSourceQueues
-          - sqs:ListQueues
-          - sqs:SendMessageBatch
-          - sqs:DeleteQueue
-          - sqs:SetQueueAttributes
-          - sqs:RemovePermission
-          Resource:
-            Fn::GetAtt:
-            - comprehendnlpQueue
-            - Arn
+        Statement: 
+          - Sid: "nlpSID"
+            Effect: Allow
+            Principal: "*"
+            Action: "sqs:*"
+            Resource: !GetAtt comprehendnlpQueue.Arn
   S3NlpNer:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
