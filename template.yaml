@@ -1903,39 +1903,20 @@ Resources:
       cfn-lint:
         config:
           ignore_checks:
-            - EPolicyWildcardPrincipal
+          - EPolicyWildcardPrincipal
+          - EIAMPolicyActionWildcard
     Properties:
-        Queues: 
-          - !Ref ingestQueue
-        PolicyDocument:
-            Version: "2012-10-17"
-            Id: "IngestID"
-            Statement: 
-              - Sid: "ingestSID"
-                Effect: Allow
-                Principal: "*"
-                Action:
-                  - "sqs:DeleteMessage"
-                  - "sqs:GetQueueUrl"
-                  - "sqs:DeleteMessageBatch"
-                  - "sqs:UntagQueue"
-                  - "sqs:CreateQueue"
-                  - "sqs:AddPermission"
-                  - "sqs:ChangeMessageVisibility"
-                  - "sqs:SendMessage"
-                  - "sqs:ListQueueTags"
-                  - "sqs:ReceiveMessage"
-                  - "sqs:GetQueueAttributes"
-                  - "sqs:ChangeMessageVisibilityBatch"
-                  - "sqs:PurgeQueue"
-                  - "sqs:TagQueue"
-                  - "sqs:ListDeadLetterSourceQueues"
-                  - "sqs:ListQueues"
-                  - "sqs:SendMessageBatch"
-                  - "sqs:DeleteQueue"
-                  - "sqs:SetQueueAttributes"
-                  - "sqs:RemovePermission"
-                Resource: !GetAtt ingestQueue.Arn
+      Queues:
+      - Ref: ingestQueue
+      PolicyDocument:
+        Version: '2012-10-17'
+        Id: IngestID
+        Statement:
+          - Sid: "ingestSID"
+            Effect: Allow
+            Principal: "*"
+            Action: "sqs:*"
+            Resource: !GetAtt ingestQueue.Arn
                 
   S3ingest:
     DeletionPolicy: Delete
@@ -1969,39 +1950,20 @@ Resources:
       cfn-lint:
         config:
           ignore_checks:
-            - EPolicyWildcardPrincipal
+          - EPolicyWildcardPrincipal
+          - EIAMPolicyActionWildcard
     Properties:
-        Queues: 
-          - !Ref comprehendlangQueue
-        PolicyDocument:
-            Version: "2012-10-17"
-            Id: "LangID"
-            Statement: 
-              - Sid: "LangSID"
-                Effect: Allow
-                Principal: "*"
-                Action:
-                  - "sqs:DeleteMessage"
-                  - "sqs:GetQueueUrl"
-                  - "sqs:DeleteMessageBatch"
-                  - "sqs:UntagQueue"
-                  - "sqs:CreateQueue"
-                  - "sqs:AddPermission"
-                  - "sqs:ChangeMessageVisibility"
-                  - "sqs:SendMessage"
-                  - "sqs:ListQueueTags"
-                  - "sqs:ReceiveMessage"
-                  - "sqs:GetQueueAttributes"
-                  - "sqs:ChangeMessageVisibilityBatch"
-                  - "sqs:PurgeQueue"
-                  - "sqs:TagQueue"
-                  - "sqs:ListDeadLetterSourceQueues"
-                  - "sqs:ListQueues"
-                  - "sqs:SendMessageBatch"
-                  - "sqs:DeleteQueue"
-                  - "sqs:SetQueueAttributes"
-                  - "sqs:RemovePermission"
-                Resource: !GetAtt comprehendlangQueue.Arn
+      Queues:
+      - Ref: comprehendlangQueue
+      PolicyDocument:
+        Version: '2012-10-17'
+        Id: LangID
+        Statement:
+        - Sid: LangSID
+          Effect: Allow
+          Principal: '*'
+          Action: "sqs:*"
+          Resource: !GetAtt comprehendlangQueue.Arn
 
   S3NlpLang:
     DeletionPolicy: Delete
@@ -2040,39 +2002,20 @@ Resources:
       cfn-lint:
         config:
           ignore_checks:
-            - EPolicyWildcardPrincipal
+          - EPolicyWildcardPrincipal
+          - EIAMPolicyActionWildcard
     Properties:
-        Queues: 
-          - !Ref comprehendnlpQueue
-        PolicyDocument:
-            Version: "2012-10-17"
-            Id: "nlpID"
-            Statement: 
-              - Sid: "nlpSID"
-                Effect: Allow
-                Principal: "*"
-                Action:
-                  - "sqs:DeleteMessage"
-                  - "sqs:GetQueueUrl"
-                  - "sqs:DeleteMessageBatch"
-                  - "sqs:UntagQueue"
-                  - "sqs:CreateQueue"
-                  - "sqs:AddPermission"
-                  - "sqs:ChangeMessageVisibility"
-                  - "sqs:SendMessage"
-                  - "sqs:ListQueueTags"
-                  - "sqs:ReceiveMessage"
-                  - "sqs:GetQueueAttributes"
-                  - "sqs:ChangeMessageVisibilityBatch"
-                  - "sqs:PurgeQueue"
-                  - "sqs:TagQueue"
-                  - "sqs:ListDeadLetterSourceQueues"
-                  - "sqs:ListQueues"
-                  - "sqs:SendMessageBatch"
-                  - "sqs:DeleteQueue"
-                  - "sqs:SetQueueAttributes"
-                  - "sqs:RemovePermission"
-                Resource: !GetAtt comprehendnlpQueue.Arn
+      Queues:
+      - Ref: comprehendnlpQueue
+      PolicyDocument:
+        Version: '2012-10-17'
+        Id: nlpID
+        Statement: 
+          - Sid: "nlpSID"
+            Effect: Allow
+            Principal: "*"
+            Action: "sqs:*"
+            Resource: !GetAtt comprehendnlpQueue.Arn
 
   S3NlpNer:
     DeletionPolicy: Delete
