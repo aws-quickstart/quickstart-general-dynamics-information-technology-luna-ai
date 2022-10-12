@@ -5,7 +5,7 @@
 :partner-company-name: General Dynamics
 :doc-month: September
 :doc-year: 2022
-:partner-contributors: Matthew Schroeder, {partner-company-name}
+:partner-contributors: Matthew Srini, GDIT
 // :other-contributors: Akua Mansa, Trek10
 // :aws-contributors: Janine Singh, AWS IoT Partner team
 :aws-ia-contributors: Dave May, AWS Integration & Automation team
