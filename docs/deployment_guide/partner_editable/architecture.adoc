@@ -11,18 +11,15 @@ image::../docs/deployment_guide/images/architecture_diagram.png[Architecture]
 
 As shown in <<architecture1>>, this Quick Start sets up the following:
 
-* A highly available architecture that spans two Availability Zones.*
-* A virtual private cloud (VPC) configured with public and private subnets, according to AWS
-best practices, to provide you with your own virtual network on AWS.*
-* In the public subnets:
-** Managed network address translation (NAT) gateways to allow outbound
-internet access for resources in the private subnets.*
-** A Linux bastion host in an Auto Scaling group to allow inbound Secure
-Shell (SSH) access to Amazon Elastic Compute Cloud (Amazon EC2) instances in public and private subnets.*
-* In the private subnets:
-** <item>.
-** <item>.
-// Add bullet points for any additional components that are included in the deployment. Ensure that the additional components are shown in the architecture diagram. End each bullet with a period.
-* <describe any additional components>.
+•	A severeness architecture.
+•	Use built-in integrations with other AWS services to create analytics, serverless, and application integration solutions on AWS quickly
+•	A complete AWS infrastructure 
+•	Not required to define exclusive infrastructure
+•	Event management and Processing through AQS SQS and AWS Lambda services.
+•	In-line Data Pipeline developments 
+•	Easy to extend/connect data pipe to customers
+•	Analytical and Search engine built through Amazon Kinesis Data Streams and Amazon Kendra is an intelligent enterprise search.
+•	Natural language processing (NLP) to get highly accurate answers without the need for machine learning (ML) expertise.
+•	Adjust your capacity to stream gigabytes per second of data with Kinesis Data Streams. Get automatic provisioning and scaling with the on-demand mode.
+•	Pay only for what you use with Kinesis Data Streams
 
-[.small]#* The template that deploys this Quick Start into an existing VPC skips the components marked by asterisks and prompts you for your existing VPC configuration.#
