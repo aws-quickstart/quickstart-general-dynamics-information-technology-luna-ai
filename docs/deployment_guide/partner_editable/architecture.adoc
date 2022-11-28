@@ -11,15 +11,23 @@ image::../docs/deployment_guide/images/architecture_diagram.png[Architecture]
 
 As shown in <<architecture1>>, this Quick Start sets up the following:
 
-•	A severeness architecture.
-•	Use built-in integrations with other AWS services to create analytics, serverless, and application integration solutions on AWS quickly
-•	A complete AWS infrastructure 
-•	Not required to define exclusive infrastructure
-•	Event management and Processing through AQS SQS and AWS Lambda services.
-•	In-line Data Pipeline developments 
-•	Easy to extend/connect data pipe to customers
-•	Analytical and Search engine built through Amazon Kinesis Data Streams and Amazon Kendra is an intelligent enterprise search.
-•	Natural language processing (NLP) to get highly accurate answers without the need for machine learning (ML) expertise.
-•	Adjust your capacity to stream gigabytes per second of data with Kinesis Data Streams. Get automatic provisioning and scaling with the on-demand mode.
-•	Pay only for what you use with Kinesis Data Streams
+//* AWS AppSync
+//-Future Development: AppSync is not utilized in the Mission Insights 2021 or Mission AI 2022. AppSync is part of the advanced, NextGen GUI experience. AppSync may be looked at for Mission AI 2023.
 
+* Amazon SQS for queuing the ingestion of input data.
+* AWS Lambda functions to do the following: 
+** Handle messaging between microservices and AWS EventBridge.
+** Process data flowing into and out of AI microservices.
+* An Amazon EventBridge event plane between the microservices implemented with Lambda, which services post events to the EventBridge triggering other services.
+* An Amazon Kinesis data stream, which provides an output stream of enrichments coming from AI services.
+* An Amazon Dynamodb Stream, which provides an output stream of table changes coming from DynamoDB thus facilitating Change Data Capture (CDC) and stream processing from the DynamoDB tables.
+* Amazon S3 buckets to store data (media, assets, etc), meta data, and microservices output data.
+//•	Amazon Kendra
+//-Future Development: Will reappear in Mission AI 2023. Decommissioned in Mission Insights 2021 and Mission AI 2022
+//•	Amazon Lake formation
+//-Future Development: Mission Insights 2021 doesn’t utilize Lake Formation. We did prototype work in Lake Formation, but it wasn’t moved into production.
+* Amazon Textract to extract text from PDFs and Images.
+* Amazon Comprehend to extract persons, places, things, quantities, commercial items, events, and more.
+* Amazon Rekognition to perform facial analysis, labeling (object recognition, scene recognition, etc), and world figure recognition.
+* Amazon SNS for messaging from select async microservices.
+* An Amazon DynamoDB database to stores system data, system metadata, metadata about data assets.
