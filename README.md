@@ -1,5 +1,5 @@
 
-## quickstart-general-dynamics-information-technology-mission-insights—Quick Start
+## partner-solution-general-dynamics-information-technology-mission-insights—Quick Start
 
 For architectural details, step-by-step instructions, and customization options, see the [deployment guide](https://aws-quickstart.github.io/quickstart-general-dynamics-information-technology-mission-insights/).
 
