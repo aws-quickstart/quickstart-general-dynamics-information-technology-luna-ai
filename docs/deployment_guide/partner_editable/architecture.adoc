@@ -30,7 +30,7 @@ As shown in <<architecture1>>, this Quick Start sets up the following:
 ** AWS Elemental MediaConvert to transcode video files.
 * Data storage and streaming services to do the following:
 ** DynamoDB to store system data, system metadata, and media asset metadata, and keep a record of changes to database tables.
-** Amazon Simple Storage Service (Amazon S3) to store landing zone and enriched data.
+** Amazon Simple Storage Service (Amazon S3) for landing zone and enriched data storage.
 ** Amazon Kinesis Data Streams to stream enriched data to Amazon Kendra and AWS Lake Formation.
 * Amazon Kendra for searching enriched data with natural language processing and advanced search algorithms.
 * AWS Lake Formation to set up, secure, and manage a data lake.
