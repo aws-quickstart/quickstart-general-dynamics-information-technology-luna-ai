@@ -28,7 +28,7 @@ As shown in <<architecture1>>, this Quick Start sets up the following:
 ** Amazon Transcribe to convert audio input into text.
 ** Amazon Translate to translate text documents.
 ** AWS Elemental MediaConvert to transcode video files.
-* Data storage and streaming services to persist and stream enriched data.
+* Data storage and streaming services to do the following:
 ** DynamoDB to store system data, system metadata, and media asset metadata, and keep a record of changes to database tables.
 ** Amazon Simple Storage Service (Amazon S3) to store landing zone and enriched data.
 ** Amazon Kinesis Data Streams to stream enriched data to Amazon Kendra and AWS Lake Formation.
