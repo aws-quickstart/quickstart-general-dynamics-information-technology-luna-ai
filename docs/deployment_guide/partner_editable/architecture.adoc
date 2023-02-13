@@ -21,7 +21,7 @@ As shown in <<architecture1>>, this Quick Start sets up the following:
 *** Poll the data-ingestion event queue and post events to EventBridge.
 *** Process data flowing from EventBridge to enrichment services and between enrichment services.
 ** EventBridge to route ingested data to enrichment services.
-* Data enrichment services, including the following:
+* Data enrichment services to do the following:
 ** Amazon Textract to extract text from PDF and image files.
 ** Amazon Comprehend to extract entities such as key phrases, places, names, organizations, quantities, and events.
 ** Amazon Rekognition to identify objects, people, text, scenes, and activities in images and videos.
