@@ -1,8 +1,7 @@
+# General Dynamics Information Technology Mission Insights—Partner Solution
 
-## quickstart-general-dynamics-information-technology-mission-insights—Partner Solution
+For architectural details, step-by-step instructions, and customization options, see the [deployment guide](https://fwd.aws/bD8Jq?).
 
-For architectural details, step-by-step instructions, and customization options, see the [deployment guide](https://aws-quickstart.github.io/quickstart-general-dynamics-information-technology-mission-insights/).
+To post feedback, submit feature ideas, or report bugs, use the **Issues** section of this GitHub repo.
 
-To post feedback, submit feature ideas, or report bugs, use the **Issues** section of this GitHub repo. 
-
-To submit code for this Partner Solution, see the [AWS Partner Solution Contributor's Kit](https://aws-ia.github.io/).
+To submit code for this Partner Solution, see the [AWS Partner Solution Contributor's Guide](https://fwd.aws/NwqYA?).
