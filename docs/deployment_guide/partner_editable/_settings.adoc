@@ -3,8 +3,8 @@
 :partner-product-name: Mission Insights
 :partner-product-short-name: Mission Insights
 :partner-company-name: General Dynamics
-:doc-month: September
-:doc-year: 2022
+:doc-month: February
+:doc-year: 2023
 :partner-contributors: Matthew Srini, GDIT
 // :other-contributors: Akua Mansa, Trek10
 // :aws-contributors: Janine Singh, AWS IoT Partner team

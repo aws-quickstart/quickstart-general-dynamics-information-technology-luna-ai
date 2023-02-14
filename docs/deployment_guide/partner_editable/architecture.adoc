@@ -14,20 +14,23 @@ As shown in <<architecture1>>, this Quick Start sets up the following:
 //* AWS AppSync
 //-Future Development: AppSync is not utilized in the Mission Insights 2021 or Mission AI 2022. AppSync is part of the advanced, NextGen GUI experience. AppSync may be looked at for Mission AI 2023.
 
-* Amazon SQS for queuing the ingestion of input data.
-* AWS Lambda functions to do the following: 
-** Handle messaging between microservices and AWS EventBridge.
-** Process data flowing into and out of AI microservices.
-* An Amazon EventBridge event plane between the microservices implemented with Lambda, which services post events to the EventBridge triggering other services.
-* An Amazon Kinesis data stream, which provides an output stream of enrichments coming from AI services.
-* An Amazon Dynamodb Stream, which provides an output stream of table changes coming from DynamoDB thus facilitating Change Data Capture (CDC) and stream processing from the DynamoDB tables.
-* Amazon S3 buckets to store data (media, assets, etc), meta data, and microservices output data.
-//•	Amazon Kendra
-//-Future Development: Will reappear in Mission AI 2023. Decommissioned in Mission Insights 2021 and Mission AI 2022
-//•	Amazon Lake formation
-//-Future Development: Mission Insights 2021 doesn’t utilize Lake Formation. We did prototype work in Lake Formation, but it wasn’t moved into production.
-* Amazon Textract to extract text from PDFs and Images.
-* Amazon Comprehend to extract persons, places, things, quantities, commercial items, events, and more.
-* Amazon Rekognition to perform facial analysis, labeling (object recognition, scene recognition, etc), and world figure recognition.
-* Amazon SNS for messaging from select async microservices.
-* An Amazon DynamoDB database to stores system data, system metadata, metadata about data assets.
+* Data ingestion services to ingest and queue user multimedia data for enrichment.
+** Amazon Simple Queue Service (Amazon SQS) for a data-ingestion event queue.
+** Amazon Simple Notification Service (Amazon SNS) to manage asynchronous messaging between Amazon EventBridge and enrichment services.
+** AWS Lambda to do the following:
+*** Poll the data-ingestion event queue and post events to EventBridge.
+*** Process data flowing from EventBridge to enrichment services and between enrichment services.
+** EventBridge to route ingested data to enrichment services.
+* Data enrichment services to do the following:
+** Amazon Textract to extract text from PDF and image files.
+** Amazon Comprehend to extract entities such as key phrases, places, names, organizations, quantities, and events.
+** Amazon Rekognition to identify objects, people, text, scenes, and activities in images and videos.
+** Amazon Transcribe to convert audio input into text.
+** Amazon Translate to translate text documents.
+** AWS Elemental MediaConvert to transcode video files.
+* Data storage and streaming services to do the following:
+** Amazon DynamoDB to store system data, system metadata, and media asset metadata, and keep a record of changes to database tables.
+** Amazon Simple Storage Service (Amazon S3) for landing zone and enriched data storage.
+** Amazon Kinesis Data Streams to stream enriched data to Amazon Kendra and AWS Lake Formation.
+* Amazon Kendra for searching enriched data with natural language processing and advanced search algorithms.
+* Lake Formation to set up, secure, and manage a data lake.
