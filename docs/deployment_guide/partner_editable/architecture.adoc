@@ -15,8 +15,8 @@ As shown in <<architecture1>>, this Quick Start sets up the following:
 //-Future Development: AppSync is not utilized in the Mission Insights 2021 or Mission AI 2022. AppSync is part of the advanced, NextGen GUI experience. AppSync may be looked at for Mission AI 2023.
 
 * Data ingestion services to ingest and queue user multimedia data for enrichment.
-** Amazon SQS for a data-ingestion event queue.
-** Amazon SNS to manage asynchronous messaging between Amazon EventBridge and enrichment services.
+** Amazon Simple Queue Service (Amazon SQS) for a data-ingestion event queue.
+** Amazon Simple Notification Service (Amazon SNS) to manage asynchronous messaging between Amazon EventBridge and enrichment services.
 ** AWS Lambda to do the following:
 *** Poll the data-ingestion event queue and post events to EventBridge.
 *** Process data flowing from EventBridge to enrichment services and between enrichment services.
@@ -29,8 +29,8 @@ As shown in <<architecture1>>, this Quick Start sets up the following:
 ** Amazon Translate to translate text documents.
 ** AWS Elemental MediaConvert to transcode video files.
 * Data storage and streaming services to do the following:
-** DynamoDB to store system data, system metadata, and media asset metadata, and keep a record of changes to database tables.
+** Amazon DynamoDB to store system data, system metadata, and media asset metadata, and keep a record of changes to database tables.
 ** Amazon Simple Storage Service (Amazon S3) for landing zone and enriched data storage.
 ** Amazon Kinesis Data Streams to stream enriched data to Amazon Kendra and AWS Lake Formation.
 * Amazon Kendra for searching enriched data with natural language processing and advanced search algorithms.
-* AWS Lake Formation to set up, secure, and manage a data lake.
+* Lake Formation to set up, secure, and manage a data lake.
