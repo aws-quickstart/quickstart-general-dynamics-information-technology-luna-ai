@@ -3,7 +3,7 @@
 :partner-product-name: Luna AI
 :partner-product-short-name: Luna AI
 :partner-company-name: General Dynamics
-:doc-month: February
+:doc-month: May
 :doc-year: 2023
 :partner-contributors: Matthew Schroeder, GDIT
 // :other-contributors: Akua Mansa, Trek10
