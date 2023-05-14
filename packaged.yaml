@@ -1,4 +1,4 @@
-AWSTemplateFormatVersion: 2010-09-09
+AWSTemplateFormatVersion: '2010-09-09'
 Description: Mission Insights Enrichment Engine (qs-1t54183nf)
 Transform: AWS::Serverless-2016-10-31
 Metadata:
@@ -17,6 +17,8 @@ Resources:
     Type: AWS::Events::EventBus
     Properties:
       Name: me-bus
+    Metadata:
+      SamResourceId: meb
   mebDiscovery:
     Type: AWS::EventSchemas::Discoverer
     Properties:
@@ -25,6 +27,8 @@ Resources:
         - meb
         - Arn
       Description: Media Enrichment Schema Discovery
+    Metadata:
+      SamResourceId: mebDiscovery
   mebArchive:
     Type: AWS::Events::Archive
     Properties:
@@ -36,10 +40,12 @@ Resources:
         Fn::GetAtt:
         - meb
         - Arn
+    Metadata:
+      SamResourceId: mebArchive
   ingestion:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/0a851eab62c9dcff784e3e0ef9370aec
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/ingestion.LambdaHandler
       Runtime: python3.8
       MemorySize: 10240
@@ -140,7 +146,7 @@ Resources:
   textractStart:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/7252924ec9f06043ffba0b59dde79aac
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/textractStart.LambdaHandler
       Runtime: python3.8
       MemorySize: 128
@@ -230,7 +236,7 @@ Resources:
   textractComplete:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/e443a1a47a5da56a44e55611e72371c8
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/textractComplete.LambdaHandler
       Runtime: python3.8
       MemorySize: 10240
@@ -321,7 +327,7 @@ Resources:
   rkImgDetectText:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/bc593037f57fc034f8de2a235912917e
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/rkImgDetectText.LambdaHandler
       Runtime: python3.8
       MemorySize: 128
@@ -409,7 +415,7 @@ Resources:
   rkImgDetectCelebrity:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/67b623e45b8bd568ba5205c8bbc52517
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/rkImgDetectCelebrity.LambdaHandler
       Runtime: python3.8
       MemorySize: 128
@@ -497,7 +503,7 @@ Resources:
   rkImgDetectLabels:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/6d1ac94de700c52710eb3c04cc62cc52
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/rkImgDetectLabels.LambdaHandler
       Runtime: python3.8
       MemorySize: 1024
@@ -585,7 +591,7 @@ Resources:
   rkImgDetectFaces:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/ea82788ea61e0031b599f32624165881
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/rkImgDetectFaces.LambdaHandler
       Runtime: python3.8
       MemorySize: 1024
@@ -673,7 +679,7 @@ Resources:
   rkImgModeration:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/a12de34742d93c77a0d17c2a76513432
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/rkImgModeration.LambdaHandler
       Runtime: python3.8
       MemorySize: 128
@@ -761,7 +767,7 @@ Resources:
   rkVidDetectFaces:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/74f483757353a7fa39be777491dc0875
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/video_rekognition_facedetection.LambdaHandler
       Runtime: python3.8
       MemorySize: 1024
@@ -839,7 +845,7 @@ Resources:
   rkVidDetectFacesComplete:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/608d18a4ea3ada949c14dfd8f5e05545
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/video_rekognition_facedetectioncomplete.LambdaHandler
       Runtime: python3.8
       MemorySize: 10240
@@ -912,7 +918,7 @@ Resources:
   dominantlanguageStart:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/e5407787ae54c60f53aee5f16581724f
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/dominantlanguageStart.LambdaHandler
       Runtime: python3.8
       MemorySize: 128
@@ -1028,7 +1034,7 @@ Resources:
   dominantlanguageComplete:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/a15731e036efceb8acc6ea8daa9c873b
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/dominantlanguageComplete.LambdaHandler
       Runtime: python3.8
       MemorySize: 1024
@@ -1103,7 +1109,7 @@ Resources:
   comprehendStart:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/deb74fe0db3800de1fab284e7236e2bf
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/comprehendStart.LambdaHandler
       Runtime: python3.8
       MemorySize: 512
@@ -1212,7 +1218,7 @@ Resources:
   comprehendComplete:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/6111dd3ea1f4091fcd0beec949ef541a
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/comprehendComplete.LambdaHandler
       Runtime: python3.8
       MemorySize: 5012
@@ -1302,7 +1308,7 @@ Resources:
   translateStart:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/d3b5c2153a7c918752d8128a41fdc2f2
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/translateStart.LambdaHandler
       Runtime: python3.8
       MemorySize: 128
@@ -1326,7 +1332,7 @@ Resources:
   translateComplete:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/cb7da8612eb8df89e4698ba3f7f2d7d3
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/translateComplete.LambdaHandler
       Runtime: python3.8
       MemorySize: 10240
@@ -1339,7 +1345,7 @@ Resources:
   rekognitionStart:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/b6f5a745ebfbe1ad63e9a209fc070d19
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/rekognitionStart.LambdaHandler
       Runtime: python3.8
       MemorySize: 128
@@ -1366,7 +1372,7 @@ Resources:
   rekognitionComplete:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/4477ee0c41050f86d93afa0df9d985d0
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/rekognitionComplete.LambdaHandler
       Runtime: python3.8
       MemorySize: 128
@@ -1379,7 +1385,7 @@ Resources:
   transcribeStart:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/41f6883d55daf6055fba8fc851de6f8d
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/transcribeStart.LambdaHandler
       Runtime: python3.8
       MemorySize: 128
@@ -1406,7 +1412,7 @@ Resources:
   transcribeComplete:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/6a3077e3d59f041ad761f5e4f24640d9
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/transcribeComplete.LambdaHandler
       Runtime: python3.8
       MemorySize: 128
@@ -1419,7 +1425,7 @@ Resources:
   elementalConvertStart:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/4e02a13dbc487bb7fc643a114e339ee0
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/elementalConvertStart.LambdaHandler
       Runtime: python3.8
       MemorySize: 128
@@ -1446,7 +1452,7 @@ Resources:
   elementalConvertComplete:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/2be0112f93bb17729673bf3f6e12e6c0
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/elementalConvertComplete.LambdaHandler
       Runtime: python3.8
       MemorySize: 128
@@ -1459,7 +1465,7 @@ Resources:
   loadAnalyticsStream:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/5ba9f59c90edeec2bb8e76bbd3ed7c19
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/loadAnalyticsStream.LambdaHandler
       Runtime: python3.8
       MemorySize: 128
@@ -1473,7 +1479,7 @@ Resources:
   loadKendraIndex:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/216e7f1c5d57d76392e9911371dfc640
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/loadKendraIndex.LambdaHandler
       Runtime: python3.8
       MemorySize: 1024
@@ -1529,7 +1535,7 @@ Resources:
   loadKendraMetadata:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/53d9e424fefc28fb62189a41c619e57b
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/loadKendraMetadata.LambdaHandler
       Runtime: python3.8
       MemorySize: 5012
@@ -1572,7 +1578,7 @@ Resources:
   loadElasticSearch:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/011dffdd8c26ef4aebecd9debb94b3b1
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/loadElasticSearch.LambdaHandler
       Runtime: python3.8
       MemorySize: 128
@@ -1585,7 +1591,7 @@ Resources:
   dynamodbEnrichments:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-quickstart-sar/b887305983bce952563a070785e2e679
+      CodeUri: s3://aws-quickstart-sar/de081b3da10871bde278119553d9c712
       Handler: src/handlers/dynamodbEnrichments.LambdaHandler
       Runtime: python3.8
       MemorySize: 128
@@ -1637,6 +1643,9 @@ Resources:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
     Properties:
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: BucketOwnerEnforced
       AccessControl: LogDeliveryWrite
       BucketEncryption:
         ServerSideEncryptionConfiguration:
@@ -1647,10 +1656,15 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+    Metadata:
+      SamResourceId: S3txtract
   S3txtractA:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
     Properties:
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: BucketOwnerEnforced
       AccessControl: LogDeliveryWrite
       BucketEncryption:
         ServerSideEncryptionConfiguration:
@@ -1661,10 +1675,15 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+    Metadata:
+      SamResourceId: S3txtractA
   S3txtPlain:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
     Properties:
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: BucketOwnerEnforced
       AccessControl: LogDeliveryWrite
       BucketEncryption:
         ServerSideEncryptionConfiguration:
@@ -1675,10 +1694,15 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+    Metadata:
+      SamResourceId: S3txtPlain
   S3NlpTop:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
     Properties:
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: BucketOwnerEnforced
       AccessControl: LogDeliveryWrite
       BucketEncryption:
         ServerSideEncryptionConfiguration:
@@ -1689,10 +1713,15 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+    Metadata:
+      SamResourceId: S3NlpTop
   S3NlpKp:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
     Properties:
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: BucketOwnerEnforced
       AccessControl: LogDeliveryWrite
       BucketEncryption:
         ServerSideEncryptionConfiguration:
@@ -1703,10 +1732,15 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+    Metadata:
+      SamResourceId: S3NlpKp
   S3Kendra:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
     Properties:
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: BucketOwnerEnforced
       AccessControl: LogDeliveryWrite
       BucketEncryption:
         ServerSideEncryptionConfiguration:
@@ -1717,10 +1751,15 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+    Metadata:
+      SamResourceId: S3Kendra
   S3Assets:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
     Properties:
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: BucketOwnerEnforced
       AccessControl: LogDeliveryWrite
       BucketEncryption:
         ServerSideEncryptionConfiguration:
@@ -1731,10 +1770,15 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+    Metadata:
+      SamResourceId: S3Assets
   S3Translate:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
     Properties:
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: BucketOwnerEnforced
       AccessControl: LogDeliveryWrite
       BucketEncryption:
         ServerSideEncryptionConfiguration:
@@ -1745,10 +1789,15 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+    Metadata:
+      SamResourceId: S3Translate
   S3Transcribe:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
     Properties:
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: BucketOwnerEnforced
       AccessControl: LogDeliveryWrite
       BucketEncryption:
         ServerSideEncryptionConfiguration:
@@ -1759,10 +1808,15 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+    Metadata:
+      SamResourceId: S3Transcribe
   S3RkTxtDet:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
     Properties:
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: BucketOwnerEnforced
       AccessControl: LogDeliveryWrite
       BucketEncryption:
         ServerSideEncryptionConfiguration:
@@ -1773,10 +1827,15 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+    Metadata:
+      SamResourceId: S3RkTxtDet
   S3RkSegDet:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
     Properties:
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: BucketOwnerEnforced
       AccessControl: LogDeliveryWrite
       BucketEncryption:
         ServerSideEncryptionConfiguration:
@@ -1787,10 +1846,15 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+    Metadata:
+      SamResourceId: S3RkSegDet
   S3RkPplTrc:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
     Properties:
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: BucketOwnerEnforced
       AccessControl: LogDeliveryWrite
       BucketEncryption:
         ServerSideEncryptionConfiguration:
@@ -1801,10 +1865,15 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+    Metadata:
+      SamResourceId: S3RkPplTrc
   S3RkLblDet:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
     Properties:
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: BucketOwnerEnforced
       AccessControl: LogDeliveryWrite
       BucketEncryption:
         ServerSideEncryptionConfiguration:
@@ -1815,10 +1884,15 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+    Metadata:
+      SamResourceId: S3RkLblDet
   S3RkFacSrch:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
     Properties:
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: BucketOwnerEnforced
       AccessControl: LogDeliveryWrite
       BucketEncryption:
         ServerSideEncryptionConfiguration:
@@ -1829,10 +1903,15 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+    Metadata:
+      SamResourceId: S3RkFacSrch
   S3RkFacDet:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
     Properties:
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: BucketOwnerEnforced
       AccessControl: LogDeliveryWrite
       BucketEncryption:
         ServerSideEncryptionConfiguration:
@@ -1843,10 +1922,15 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+    Metadata:
+      SamResourceId: S3RkFacDet
   S3RkCeleb:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
     Properties:
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: BucketOwnerEnforced
       AccessControl: LogDeliveryWrite
       BucketEncryption:
         ServerSideEncryptionConfiguration:
@@ -1857,10 +1941,15 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+    Metadata:
+      SamResourceId: S3RkCeleb
   S3RkMod:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
     Properties:
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: BucketOwnerEnforced
       AccessControl: LogDeliveryWrite
       BucketEncryption:
         ServerSideEncryptionConfiguration:
@@ -1871,10 +1960,15 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+    Metadata:
+      SamResourceId: S3RkMod
   S3AzureDescrImg:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
     Properties:
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: BucketOwnerEnforced
       AccessControl: LogDeliveryWrite
       BucketEncryption:
         ServerSideEncryptionConfiguration:
@@ -1885,6 +1979,8 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+    Metadata:
+      SamResourceId: S3AzureDescrImg
   Assets:
     DeletionPolicy: Delete
     Type: AWS::DynamoDB::Table
@@ -1898,6 +1994,8 @@ Resources:
         KeyType: HASH
       StreamSpecification:
         StreamViewType: NEW_IMAGE
+    Metadata:
+      SamResourceId: Assets
   AssetProcessing:
     DeletionPolicy: Delete
     Type: AWS::DynamoDB::Table
@@ -1918,6 +2016,8 @@ Resources:
         KeyType: RANGE
       StreamSpecification:
         StreamViewType: NEW_IMAGE
+    Metadata:
+      SamResourceId: AssetProcessing
   AssetAttributes:
     DeletionPolicy: Delete
     Type: AWS::DynamoDB::Table
@@ -1935,6 +2035,8 @@ Resources:
         KeyType: RANGE
       StreamSpecification:
         StreamViewType: NEW_IMAGE
+    Metadata:
+      SamResourceId: AssetAttributes
   AssetEnrichments:
     DeletionPolicy: Delete
     Type: AWS::DynamoDB::Table
@@ -1952,6 +2054,8 @@ Resources:
         KeyType: RANGE
       StreamSpecification:
         StreamViewType: NEW_IMAGE
+    Metadata:
+      SamResourceId: AssetEnrichments
   AssetHistory:
     DeletionPolicy: Delete
     Type: AWS::DynamoDB::Table
@@ -1965,6 +2069,8 @@ Resources:
         KeyType: HASH
       StreamSpecification:
         StreamViewType: NEW_IMAGE
+    Metadata:
+      SamResourceId: AssetHistory
   AssetFormats:
     DeletionPolicy: Delete
     Type: AWS::DynamoDB::Table
@@ -1982,6 +2088,8 @@ Resources:
         KeyType: RANGE
       StreamSpecification:
         StreamViewType: NEW_IMAGE
+    Metadata:
+      SamResourceId: AssetFormats
   ErrorTable:
     DeletionPolicy: Delete
     Type: AWS::DynamoDB::Table
@@ -1999,6 +2107,8 @@ Resources:
         KeyType: RANGE
       StreamSpecification:
         StreamViewType: NEW_IMAGE
+    Metadata:
+      SamResourceId: ErrorTable
   Collections:
     DeletionPolicy: Delete
     Type: AWS::DynamoDB::Table
@@ -2012,6 +2122,8 @@ Resources:
         KeyType: HASH
       StreamSpecification:
         StreamViewType: NEW_IMAGE
+    Metadata:
+      SamResourceId: Collections
   CollectionSubscribers:
     DeletionPolicy: Delete
     Type: AWS::DynamoDB::Table
@@ -2029,6 +2141,8 @@ Resources:
         KeyType: RANGE
       StreamSpecification:
         StreamViewType: NEW_IMAGE
+    Metadata:
+      SamResourceId: CollectionSubscribers
   SearchTable:
     DeletionPolicy: Delete
     Type: AWS::DynamoDB::Table
@@ -2067,6 +2181,8 @@ Resources:
           KeyType: RANGE
         Projection:
           ProjectionType: ALL
+    Metadata:
+      SamResourceId: SearchTable
   SearchAggregateTable:
     DeletionPolicy: Delete
     Type: AWS::DynamoDB::Table
@@ -2095,9 +2211,13 @@ Resources:
           KeyType: RANGE
         Projection:
           ProjectionType: ALL
+    Metadata:
+      SamResourceId: SearchAggregateTable
   ingestQueue:
     DeletionPolicy: Delete
     Type: AWS::SQS::Queue
+    Metadata:
+      SamResourceId: ingestQueue
   ingestQueuePolicy:
     Type: AWS::SQS::QueuePolicy
     Metadata:
@@ -2106,6 +2226,7 @@ Resources:
           ignore_checks:
           - EPolicyWildcardPrincipal
           - EIAMPolicyActionWildcard
+      SamResourceId: ingestQueuePolicy
     Properties:
       Queues:
       - Ref: ingestQueue
@@ -2113,11 +2234,14 @@ Resources:
         Version: '2012-10-17'
         Id: IngestID
         Statement:
-          - Sid: "ingestSID"
-            Effect: Allow
-            Principal: "*"
-            Action: "sqs:*"
-            Resource: !GetAtt ingestQueue.Arn
+        - Sid: ingestSID
+          Effect: Allow
+          Principal: '*'
+          Action: sqs:*
+          Resource:
+            Fn::GetAtt:
+            - ingestQueue
+            - Arn
   S3ingest:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
@@ -2140,11 +2264,15 @@ Resources:
             Fn::GetAtt:
             - ingestQueue
             - Arn
+    Metadata:
+      SamResourceId: S3ingest
   comprehendlangQueue:
     DeletionPolicy: Delete
     Type: AWS::SQS::Queue
     Properties:
       VisibilityTimeout: 120
+    Metadata:
+      SamResourceId: comprehendlangQueue
   comprehendlangQueuePolicy:
     Type: AWS::SQS::QueuePolicy
     Metadata:
@@ -2153,6 +2281,7 @@ Resources:
           ignore_checks:
           - EPolicyWildcardPrincipal
           - EIAMPolicyActionWildcard
+      SamResourceId: comprehendlangQueuePolicy
     Properties:
       Queues:
       - Ref: comprehendlangQueue
@@ -2163,8 +2292,11 @@ Resources:
         - Sid: LangSID
           Effect: Allow
           Principal: '*'
-          Action: "sqs:*"
-          Resource: !GetAtt comprehendlangQueue.Arn
+          Action: sqs:*
+          Resource:
+            Fn::GetAtt:
+            - comprehendlangQueue
+            - Arn
   S3NlpLang:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
@@ -2192,11 +2324,15 @@ Resources:
               Rules:
               - Name: suffix
                 Value: .gz
+    Metadata:
+      SamResourceId: S3NlpLang
   comprehendnlpQueue:
     DeletionPolicy: Delete
     Type: AWS::SQS::Queue
     Properties:
       VisibilityTimeout: 900
+    Metadata:
+      SamResourceId: comprehendnlpQueue
   comprehendnlpQueuePolicy:
     Type: AWS::SQS::QueuePolicy
     Metadata:
@@ -2205,18 +2341,22 @@ Resources:
           ignore_checks:
           - EPolicyWildcardPrincipal
           - EIAMPolicyActionWildcard
+      SamResourceId: comprehendnlpQueuePolicy
     Properties:
       Queues:
       - Ref: comprehendnlpQueue
       PolicyDocument:
         Version: '2012-10-17'
         Id: nlpID
-        Statement: 
-          - Sid: "nlpSID"
-            Effect: Allow
-            Principal: "*"
-            Action: "sqs:*"
-            Resource: !GetAtt comprehendnlpQueue.Arn
+        Statement:
+        - Sid: nlpSID
+          Effect: Allow
+          Principal: '*'
+          Action: sqs:*
+          Resource:
+            Fn::GetAtt:
+            - comprehendnlpQueue
+            - Arn
   S3NlpNer:
     DeletionPolicy: Delete
     Type: AWS::S3::Bucket
@@ -2244,12 +2384,20 @@ Resources:
               Rules:
               - Name: suffix
                 Value: .gz
+    Metadata:
+      SamResourceId: S3NlpNer
   AmazonTextractSNS:
     Type: AWS::SNS::Topic
+    Metadata:
+      SamResourceId: AmazonTextractSNS
   AmazonTextractASNS:
     Type: AWS::SNS::Topic
+    Metadata:
+      SamResourceId: AmazonTextractASNS
   AmazonRkFaceDetSNS:
     Type: AWS::SNS::Topic
+    Metadata:
+      SamResourceId: AmazonRkFaceDetSNS
   TextractSNSRl:
     Type: AWS::IAM::Role
     Properties:
@@ -2269,6 +2417,8 @@ Resources:
       - Fn::Sub: arn:${AWS::Partition}:iam::aws:policy/AmazonS3FullAccess
       - Fn::Sub: arn:${AWS::Partition}:iam::aws:policy/AmazonTextractFullAccess
       - Fn::Sub: arn:${AWS::Partition}:iam::aws:policy/AmazonSNSFullAccess
+    Metadata:
+      SamResourceId: TextractSNSRl
   ComprehendAccess:
     Type: AWS::IAM::Role
     Properties:
@@ -2286,6 +2436,8 @@ Resources:
       ManagedPolicyArns:
       - Fn::Sub: arn:${AWS::Partition}:iam::aws:policy/AmazonS3FullAccess
       - Fn::Sub: arn:${AWS::Partition}:iam::aws:policy/ComprehendFullAccess
+    Metadata:
+      SamResourceId: ComprehendAccess
   RekognitionAccess:
     Type: AWS::IAM::Role
     Properties:
@@ -2305,6 +2457,8 @@ Resources:
       - Fn::Sub: arn:${AWS::Partition}:iam::aws:policy/AmazonS3FullAccess
       - Fn::Sub: arn:${AWS::Partition}:iam::aws:policy/AmazonRekognitionFullAccess
       - Fn::Sub: arn:${AWS::Partition}:iam::aws:policy/AmazonSNSFullAccess
+    Metadata:
+      SamResourceId: RekognitionAccess
 Outputs:
   eventbridgename:
     Description: AWS Event Bridge Name
