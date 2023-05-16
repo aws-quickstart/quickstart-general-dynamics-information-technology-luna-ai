@@ -34,7 +34,7 @@ Resources:
     Properties:
       ArchiveName:
         Ref: meb
-      Description: Media Enrichment Archive
+      Description: Luna AI Archive
       RetentionDays: 1
       SourceArn:
         Fn::GetAtt:
