@@ -5,7 +5,7 @@
 # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/format-version-structure.html
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
-  Mission Insights Enrichment Engine (qs-1t54183nf)
+  Luna AI (qs-1t54183nf)
 
 # Transform section specifies one or more macros that AWS CloudFormation uses to process your template 
 # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-section-structure.html
@@ -39,7 +39,7 @@ Globals:
 #    PermissionsBoundary: !Sub 'arn:${AWS::Partition}:iam::${AWS::AccountId}:policy/${AppId}-${AWS::Region}-PermissionsBoundary'
     Tags:
         Team: "AI and Data Insights"
-        Project: "mi-media engine"
+        Project: "Luna AI"
 
 #Parameters:
 #  AppId:
@@ -63,13 +63,13 @@ Resources:
     Type: AWS::EventSchemas::Discoverer
     Properties:
       SourceArn: !GetAtt meb.Arn
-      Description: "Media Enrichment Schema Discovery"
+      Description: "Luna AI Schema Discovery"
 
   mebArchive:
      Type: AWS::Events::Archive
      Properties: 
        ArchiveName: !Ref meb
-       Description: "Media Enrichment Archive"
+       Description: "Luna AI Archive"
        RetentionDays: 1
        SourceArn: !GetAtt meb.Arn
 
