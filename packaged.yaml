@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: Mission Insights Enrichment Engine (qs-1t54183nf)
+Description: Luna AI (qs-1t54183nf)
 Transform: AWS::Serverless-2016-10-31
 Metadata:
   cfn-lint:
@@ -11,7 +11,7 @@ Globals:
   Function:
     Tags:
       Team: AI and Data Insights
-      Project: mi-media engine
+      Project: Luna AI
 Resources:
   meb:
     Type: AWS::Events::EventBus
@@ -26,7 +26,7 @@ Resources:
         Fn::GetAtt:
         - meb
         - Arn
-      Description: Media Enrichment Schema Discovery
+      Description: Luna AI Schema Discovery
     Metadata:
       SamResourceId: mebDiscovery
   mebArchive:
