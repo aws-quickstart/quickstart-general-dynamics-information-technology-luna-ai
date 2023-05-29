@@ -1,11 +1,11 @@
-:quickstart-project-name: quickstart-general-dynamics-information-technology-mission-insights
+:quickstart-project-name: quickstart-general-dynamics-information-technology-luna-ai
 :quickstart-github-org: aws-quickstart
-:partner-product-name: Mission Insights
-:partner-product-short-name: Mission Insights
+:partner-product-name: Luna AI
+:partner-product-short-name: Luna AI
 :partner-company-name: General Dynamics
-:doc-month: February
+:doc-month: June
 :doc-year: 2023
-:partner-contributors: Matthew Srini, GDIT
+:partner-contributors: Matthew Schroeder, GDIT
 // :other-contributors: Akua Mansa, Trek10
 // :aws-contributors: Janine Singh, AWS IoT Partner team
 :aws-ia-contributors: Dave May, AWS Integration & Automation team

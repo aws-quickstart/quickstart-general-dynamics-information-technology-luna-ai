@@ -12,7 +12,7 @@ image::../docs/deployment_guide/images/architecture_diagram.png[Architecture]
 As shown in <<architecture1>>, this Quick Start sets up the following:
 
 //* AWS AppSync
-//-Future Development: AppSync is not utilized in the Mission Insights 2021 or Mission AI 2022. AppSync is part of the advanced, NextGen GUI experience. AppSync may be looked at for Mission AI 2023.
+//-Future Development: AppSync is not utilized in the Luna AI 2021 or Mission AI 2022. AppSync is part of the advanced, NextGen GUI experience. AppSync may be looked at for Mission AI 2023.
 
 * Data ingestion services to ingest and queue user multimedia data for enrichment.
 ** Amazon Simple Queue Service (Amazon SQS) for a data-ingestion event queue.
