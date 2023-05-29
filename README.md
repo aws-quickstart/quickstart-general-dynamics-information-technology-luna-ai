@@ -1,4 +1,4 @@
-# General Dynamics Information Technology Mission Insights—Partner Solution
+# General Dynamics Information Technology Luna AI—Partner Solution
 
 For architectural details, step-by-step instructions, and customization options, see the [deployment guide](https://fwd.aws/bD8Jq?).
 
