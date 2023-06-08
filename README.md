@@ -1,5 +1,5 @@
 
-## partner-solution-general-dynamics-information-technology-mission-insights—Partner Solution
+## partner-solution-general-dynamics-information-technology-luna-ai-Partner Solution
 
 For architectural details, step-by-step instructions, and customization options, refer to the [deployment guide](https://aws-quickstart.github.io/quickstart-general-dynamics-information-technology-mission-insights/).
 
